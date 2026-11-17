@@ -1,0 +1,194 @@
+<!DOCTYPE html>
+<html lang="es">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta
+      name="description"
+      content="Ubicaciones de los estacionamientos de Eli Park en México."
+    />
+    <title>Estacionamientos | Eli Park</title>
+    <link rel="icon" type="image/png" href="../Assets/logo_noText.png" />
+    <meta name="theme-color" content="#e01016" />
+    <meta property="og:type" content="website" />
+    <meta property="og:site_name" content="Eli Park" />
+    <meta property="og:locale" content="es_MX" />
+    <meta property="og:title" content="Estacionamientos | Eli Park" />
+    <meta property="og:description" content="Ubicaciones de los estacionamientos de Eli Park en México." />
+    <link rel="apple-touch-icon" href="../Assets/logo_noText.png" />
+
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Montserrat:wght@500;600;700;800&family=Open+Sans:wght@400;600;700&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+    />
+
+    <link rel="stylesheet" href="../Utilities/theme.css" />
+    <link rel="stylesheet" href="../Utilities/navBar.css" />
+    <link rel="stylesheet" href="../Utilities/footer.css" />
+    <link rel="stylesheet" href="../Utilities/loadingScreen.css" />
+    <link rel="stylesheet" href="../Utilities/redDividerLine.css" />
+    <link rel="stylesheet" href="../Styling/estacionamientos.css" />
+  </head>
+  <body>
+    <div id="loader-container">
+      <div id="loadingScreen" role="status" aria-label="Cargando">
+        <img src="../Assets/ELI-PARK-LOGO-LARGE.png" alt="" />
+        <div class="loader-bar"></div>
+      </div>
+    </div>
+
+    <div id="navbar-container"></div>
+
+    <!-- ========== LIST OF CITIES ========== -->
+    <div id="cities-view">
+      <div class="redDividerLine-container"></div>
+
+      <h1 id="lblEstacionamientos" class="ep-page-title">Estacionamientos</h1>
+
+      <p id="lblDescription_estacionamientos" class="ep-page-lead">
+        Descubre la ubicación de nuestros estacionamientos a lo largo de México.
+        Selecciona una ciudad para ver nuestras ubicaciones.
+      </p>
+
+      <div id="cardContainers_location">
+        <div class="card" id="card-mexico">
+          <img src="../Assets/parking-card-images/thumbs/cdmx.jpg" alt="" loading="lazy" decoding="async" />
+          <div class="card-body">
+            <h3>MÉXICO</h3>
+          </div>
+        </div>
+
+        <div class="card" id="card-cancun">
+          <img src="../Assets/parking-card-images/thumbs/cancun.jpg" alt="" loading="lazy" decoding="async" />
+          <div class="card-body">
+            <h3>CANCÚN</h3>
+          </div>
+        </div>
+
+        <div class="card" id="card-playa-del-carmen">
+          <img src="../Assets/parking-card-images/thumbs/pdc.jpg" alt="" loading="lazy" decoding="async" />
+          <div class="card-body">
+            <h3>PLAYA DEL CARMEN</h3>
+          </div>
+        </div>
+
+        <div class="card" id="card-cuernavaca">
+          <img src="../Assets/parking-card-images/thumbs/cuernavaca.jpg" alt="" loading="lazy" decoding="async" />
+          <div class="card-body">
+            <h3>CUERNAVACA</h3>
+          </div>
+        </div>
+
+        <div class="card" id="card-guadalajara">
+          <img src="../Assets/parking-card-images/thumbs/guadalajara.jpg" alt="" loading="lazy" decoding="async" />
+          <div class="card-body">
+            <h3>GUADALAJARA</h3>
+          </div>
+        </div>
+
+        <div class="card" id="card-tepic">
+          <img src="../Assets/parking-card-images/thumbs/tepic.jpg" alt="" loading="lazy" decoding="async" />
+          <div class="card-body">
+            <h3>TEPIC</h3>
+          </div>
+        </div>
+
+        <div class="card" id="card-acapulco">
+          <img src="../Assets/parking-card-images/thumbs/acapulco.jpg" alt="" loading="lazy" decoding="async" />
+          <div class="card-body">
+            <h3>ACAPULCO</h3>
+          </div>
+        </div>
+
+        <div class="card" id="card-toluca">
+          <img src="../Assets/parking-card-images/thumbs/toluca.jpg" alt="" loading="lazy" decoding="async" />
+          <div class="card-body">
+            <h3>TOLUCA</h3>
+          </div>
+        </div>
+
+        <div class="card" id="card-pachuca">
+          <img src="../Assets/parking-card-images/thumbs/pachuca.jpg" alt="" loading="lazy" decoding="async" />
+          <div class="card-body">
+            <h3>PACHUCA</h3>
+          </div>
+        </div>
+
+        <div class="card" id="card-monterrey">
+          <img src="../Assets/parking-card-images/thumbs/monterrey.jpg" alt="" loading="lazy" decoding="async" />
+          <div class="card-body">
+            <h3>MONTERREY</h3>
+          </div>
+        </div>
+
+        <div class="card" id="card-coatzacoalcos">
+          <img src="../Assets/parking-card-images/thumbs/coatzacoalcos.jpg" alt="" loading="lazy" decoding="async" />
+          <div class="card-body">
+            <h3>COATZACOALCOS</h3>
+          </div>
+        </div>
+
+        <div class="card" id="card-culiacan">
+          <img src="../Assets/parking-card-images/thumbs/culiacan.jpg" alt="" loading="lazy" decoding="async" />
+          <div class="card-body">
+            <h3>CULIACÁN</h3>
+          </div>
+        </div>
+
+        <div class="card" id="card-tlaquepaque">
+          <img src="../Assets/parking-card-images/thumbs/tlaquepaque.jpg" alt="" loading="lazy" decoding="async" />
+          <div class="card-body">
+            <h3>TLAQUEPAQUE</h3>
+          </div>
+        </div>
+
+        <div class="card" id="card-puertovallarta">
+          <img src="../Assets/parking-card-images/thumbs/puertovallarta.jpg" alt="" loading="lazy" decoding="async" />
+          <div class="card-body">
+            <h3>PUERTO VALLARTA</h3>
+          </div>
+        </div>
+
+        <div class="card" id="card-tuxtlagutierrez">
+          <img src="../Assets/parking-card-images/thumbs/tuxtla.jpg" alt="" loading="lazy" decoding="async" />
+          <div class="card-body">
+            <h3>TUXTLA GUTIÉRREZ</h3>
+          </div>
+        </div>
+
+        <div class="card" id="card-ciudaddelcarmen">
+          <img src="../Assets/parking-card-images/thumbs/ciudaddelcarmen.jpg" alt="" loading="lazy" decoding="async" />
+          <div class="card-body">
+            <h3>CIUDAD DEL CARMEN</h3>
+          </div>
+        </div>
+
+        <div class="card" id="card-colima">
+          <img src="../Assets/parking-card-images/thumbs/colima.jpg" alt="" loading="lazy" decoding="async" />
+          <div class="card-body">
+            <h3>COLIMA</h3>
+          </div>
+        </div>
+      </div>
+    </div>
+    <!-- The page for a single city (#city-details) is built by
+         Utilities/parking/logic.js and placed right here. -->
+
+    <div id="main-footer-container"></div>
+
+    <script src="../Utilities/navBar.js"></script>
+    <script src="../Utilities/footer.js"></script>
+    <script src="../Utilities/loadingScreen.js"></script>
+    <script src="../Utilities/redDividerLine.js"></script>
+
+    <script src="../Utilities/parking/parkingData.js"></script>
+    <script src="../Utilities/parking/logic.js"></script>
+    <script src="../Utilities/pageEffects.js"></script>
+  </body>
+</html>

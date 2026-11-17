@@ -1,0 +1,342 @@
+/* ==========================================================================
+   ELI PARK — SHARED THEME
+   Colors, fonts, buttons and small helpers used on every page.
+   Change a value here and it updates across the whole site.
+   Load this right AFTER Bootstrap and BEFORE the page's own stylesheet.
+   ========================================================================== */
+
+:root {
+  /* Brand colors (red / black / white) */
+  --ep-red: #e01016; /* brand red — a hair deeper than the logo (#ff1414) so white text on it stays easy to read */
+  --ep-red-dark: #b50d12; /* hover / pressed */
+  --ep-red-soft: #fdeceb; /* very light red tint for backgrounds */
+  --ep-black: #111111;
+  --ep-ink: #1c1c1c; /* headings */
+  --ep-text: #444444; /* body text (darker than "gray" so it's easier to read) */
+  --ep-muted: #666666; /* secondary text */
+  --ep-line: #e7e7e7; /* thin borders */
+  --ep-bg-soft: #f6f6f6; /* light gray section background */
+  --ep-white: #ffffff;
+
+  /* Shape & depth */
+  --ep-radius: 12px;
+  --ep-shadow-sm: 0 2px 10px rgba(0, 0, 0, 0.06);
+  --ep-shadow: 0 10px 28px rgba(0, 0, 0, 0.09);
+  --ep-shadow-lg: 0 18px 44px rgba(0, 0, 0, 0.16);
+
+  /* Fonts */
+  --ep-font-head: "Montserrat", "Segoe UI", Arial, sans-serif;
+  --ep-font-body: "Open Sans", "Segoe UI", Arial, sans-serif;
+}
+
+/* ---------- Base ---------- */
+html {
+  scroll-behavior: smooth;
+  scroll-padding-top: 90px; /* so anchored content isn't hidden behind the sticky menu */
+}
+
+body {
+  font-family: var(--ep-font-body);
+  font-size: 1.0625rem; /* 17px — slightly larger for comfortable reading */
+  line-height: 1.7;
+  color: var(--ep-text);
+  background-color: var(--ep-white);
+  -webkit-font-smoothing: antialiased;
+  text-rendering: optimizeLegibility;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  font-family: var(--ep-font-head);
+  color: var(--ep-ink);
+  line-height: 1.25;
+}
+
+a {
+  color: var(--ep-red);
+  text-underline-offset: 3px;
+}
+
+a:hover {
+  color: var(--ep-red-dark);
+}
+
+b,
+strong {
+  color: var(--ep-ink);
+}
+
+img {
+  max-width: 100%;
+}
+
+/* No grey flash when tapping links and buttons on phones */
+a,
+button,
+label,
+[role="button"] {
+  -webkit-tap-highlight-color: transparent;
+}
+
+::selection {
+  background: var(--ep-red);
+  color: var(--ep-white);
+}
+
+/* Clear keyboard focus ring (helps anyone navigating with the keyboard) */
+:focus-visible {
+  outline: 3px solid var(--ep-red);
+  outline-offset: 3px;
+}
+
+/* ---------- Page titles ---------- */
+.ep-page-title {
+  text-align: center;
+  font-weight: 800;
+  font-size: clamp(1.9rem, 1.4rem + 2vw, 2.6rem);
+  letter-spacing: 0.04em;
+  text-transform: uppercase;
+  color: var(--ep-ink);
+  margin: 0 1rem;
+}
+
+.ep-page-lead {
+  max-width: 760px;
+  margin: 1.25rem auto 0;
+  padding: 0 1.25rem;
+  text-align: center;
+  color: var(--ep-muted);
+  font-size: 1.15rem;
+}
+
+/* Short intro paragraph right under a section title */
+.ep-page-lead.section-lead {
+  margin-top: -1.4rem;
+  margin-bottom: 2.75rem;
+}
+
+.ep-section-title {
+  text-align: center;
+  font-weight: 800;
+  font-size: clamp(1.45rem, 1.1rem + 1.2vw, 2rem);
+  letter-spacing: 0.04em;
+  text-transform: uppercase;
+  margin: 0 1rem 2.5rem;
+}
+
+/* ---------- Buttons ---------- */
+.ep-btn {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.6rem;
+  min-height: 52px;
+  padding: 0.9rem 2rem;
+  border: 2px solid var(--ep-red);
+  border-radius: 6px;
+  background-color: var(--ep-red);
+  color: var(--ep-white);
+  font-family: var(--ep-font-head);
+  font-size: 0.95rem;
+  font-weight: 700;
+  letter-spacing: 0.06em;
+  text-transform: uppercase;
+  text-decoration: none;
+  line-height: 1.2;
+  cursor: pointer;
+  box-shadow: 0 6px 16px rgba(224, 16, 22, 0.22);
+  transition:
+    background-color 0.25s ease,
+    border-color 0.25s ease,
+    color 0.25s ease,
+    transform 0.25s ease,
+    box-shadow 0.25s ease;
+}
+
+.ep-btn::after {
+  content: "\2192"; /* → */
+  font-size: 1.1em;
+  line-height: 1;
+  transition: transform 0.25s ease;
+}
+
+.ep-btn:hover,
+.ep-btn:focus-visible {
+  background-color: var(--ep-red-dark);
+  border-color: var(--ep-red-dark);
+  color: var(--ep-white);
+  transform: translateY(-2px);
+  box-shadow: 0 10px 22px rgba(224, 16, 22, 0.3);
+}
+
+.ep-btn:hover::after {
+  transform: translateX(4px);
+}
+
+.ep-btn:active {
+  transform: translateY(0);
+}
+
+.ep-btn:disabled {
+  background-color: #bdbdbd;
+  border-color: #bdbdbd;
+  box-shadow: none;
+  transform: none;
+  cursor: not-allowed;
+}
+
+.ep-btn:disabled::after {
+  content: none;
+}
+
+/* Version without the → arrow (for buttons that have their own icon) */
+.ep-btn--no-arrow::after {
+  content: none;
+}
+
+/* Outline version (white with red border) */
+.ep-btn--outline {
+  background-color: transparent;
+  color: var(--ep-red);
+  box-shadow: none;
+}
+
+.ep-btn--outline:hover,
+.ep-btn--outline:focus-visible {
+  background-color: var(--ep-red);
+  border-color: var(--ep-red);
+  color: var(--ep-white);
+}
+
+/* See-through version for use on top of photos */
+.ep-btn--ghost {
+  background-color: rgba(0, 0, 0, 0.15);
+  border-color: rgba(255, 255, 255, 0.85);
+  color: var(--ep-white);
+  box-shadow: none;
+}
+
+.ep-btn--ghost:hover,
+.ep-btn--ghost:focus-visible {
+  background-color: var(--ep-white);
+  border-color: var(--ep-white);
+  color: var(--ep-ink);
+}
+
+/* White version for use on red backgrounds */
+.ep-btn--white {
+  background-color: var(--ep-white);
+  border-color: var(--ep-white);
+  color: var(--ep-red);
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.18);
+}
+
+.ep-btn--white:hover,
+.ep-btn--white:focus-visible {
+  background-color: var(--ep-black);
+  border-color: var(--ep-black);
+  color: var(--ep-white);
+}
+
+/* ---------- Scroll "fade-up" effect ----------
+   Add class="reveal" to any block to have it gently fade in when it scrolls
+   into view. Only active when pageEffects.js runs, so content is never hidden
+   if JavaScript fails. */
+.ep-js .reveal {
+  opacity: 0;
+}
+
+/* Uses an animation (not a transition) so it never interferes with a
+   card's own hover effects */
+.ep-js .reveal.is-visible {
+  animation: epReveal 0.8s ease both;
+}
+
+@keyframes epReveal {
+  from {
+    opacity: 0;
+    translate: 0 28px;
+  }
+  to {
+    opacity: 1;
+    translate: 0 0;
+  }
+}
+
+/* ---------- Back-to-top button (created by pageEffects.js) ---------- */
+.back-to-top {
+  position: fixed;
+  right: 24px;
+  bottom: 24px;
+  z-index: 1020;
+  width: 50px;
+  height: 50px;
+  border: none;
+  border-radius: 50%;
+  background-color: var(--ep-red);
+  color: var(--ep-white);
+  font-size: 1.4rem;
+  line-height: 1;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  box-shadow: 0 6px 18px rgba(224, 16, 22, 0.35);
+  opacity: 0;
+  visibility: hidden;
+  transform: translateY(12px);
+  transition:
+    opacity 0.3s ease,
+    visibility 0.3s ease,
+    transform 0.3s ease,
+    background-color 0.25s ease;
+}
+
+.back-to-top.visible {
+  opacity: 1;
+  visibility: visible;
+  transform: none;
+}
+
+.back-to-top:hover {
+  background-color: var(--ep-red-dark);
+  transform: translateY(-3px);
+}
+
+body.showing-details .back-to-top {
+  display: none !important;
+}
+
+@media (max-width: 768px) {
+  .back-to-top {
+    right: 16px;
+    bottom: 16px;
+    width: 46px;
+    height: 46px;
+  }
+}
+
+/* ---------- Respect "reduce motion" settings ---------- */
+@media (prefers-reduced-motion: reduce) {
+  html {
+    scroll-behavior: auto;
+  }
+
+  .ep-js .reveal,
+  .ep-js .reveal.is-visible {
+    opacity: 1;
+    animation: none;
+  }
+
+  *,
+  *::before,
+  *::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+  }
+}

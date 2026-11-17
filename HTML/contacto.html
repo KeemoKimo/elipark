@@ -1,0 +1,555 @@
+<!DOCTYPE html>
+<html lang="es">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta
+      name="description"
+      content="Contacta a Eli Park: corporativos en Cancún y Ciudad de México."
+    />
+    <title>Contacto | Eli Park</title>
+    <link rel="icon" type="image/png" href="../Assets/logo_noText.png" />
+    <meta name="theme-color" content="#e01016" />
+    <meta property="og:type" content="website" />
+    <meta property="og:site_name" content="Eli Park" />
+    <meta property="og:locale" content="es_MX" />
+    <meta property="og:title" content="Contacto | Eli Park" />
+    <meta property="og:description" content="Contacta a Eli Park: corporativos en Cancún y Ciudad de México." />
+    <link rel="apple-touch-icon" href="../Assets/logo_noText.png" />
+
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Montserrat:wght@500;600;700;800&family=Open+Sans:wght@400;600;700&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+    />
+
+    <link rel="stylesheet" href="../Utilities/theme.css" />
+    <link rel="stylesheet" href="../Utilities/navBar.css" />
+    <link rel="stylesheet" href="../Utilities/footer.css" />
+    <link rel="stylesheet" href="../Utilities/loadingScreen.css" />
+    <link rel="stylesheet" href="../Utilities/redDividerLine.css" />
+    <link rel="stylesheet" href="../Styling/contacto.css" />
+  </head>
+  <body>
+    <div id="loader-container">
+      <div id="loadingScreen" role="status" aria-label="Cargando">
+        <img src="../Assets/ELI-PARK-LOGO-LARGE.png" alt="" />
+        <div class="loader-bar"></div>
+      </div>
+    </div>
+
+    <div id="navbar-container"></div>
+
+    <img
+      src="../Assets/img_cancun/4.jpg"
+      alt="Acomodador de Eli Park en la entrada de un estacionamiento"
+      style="object-position: 50% 35%"
+      id="imgContacto"
+      fetchpriority="high"
+    />
+
+    <div class="redDividerLine-container"></div>
+
+    <h1 id="lblContacto" class="ep-page-title">Contacto</h1>
+
+    <p id="lblDescription_contacto" class="ep-page-lead">
+      Nuestra compañía se compromete a brindar un excelente servicio y a
+      resolver cualquier tipo de necesidad que pudiera surgir en su
+      estacionamiento, plaza, centro comercial, etc.
+    </p>
+
+    <!-- ========== OFFICES ========== -->
+    <div class="contactDivContainer">
+      <article class="contactInfoDiv reveal" id="contactInfoDiv_CANCUN">
+        <h2>Corporativo Cancún</h2>
+        <p class="contact-address">
+          Nube 17-MANZANA 3, LOTE 32, SMZA.4, C.P. 77500 CANCÚN, QUINTANA ROO,
+          MÉXICO
+        </p>
+        <div class="phoneContactDivWrapper">
+          <div class="phoneContactDiv">
+            <img src="../Assets/icons/phone_icon.png" alt="" />
+            0199 88853021
+          </div>
+          <div class="phoneContactDiv">
+            <img src="../Assets/icons/phone_icon.png" alt="" />
+            0199 88406417
+          </div>
+        </div>
+        <iframe
+          id="mapCancun"
+          class="mapStyle"
+          title="Mapa del Corporativo Cancún"
+          src="https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d727.2271893411493!2d-86.8221777!3d21.1540629!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x8f4c2955f7e665bb%3A0x6d910402cb917249!2sNube%2017-MZ.3%2C%20LOTE%2032%2C%20capilla%20ecumenica%2C%2077500%20Canc%C3%BAn%2C%20Q.R.%2C%20Mexico!5e1!3m2!1sen!2sca!4v1762992680323!5m2!1sen!2sca"
+          allowfullscreen=""
+          loading="lazy"
+          referrerpolicy="no-referrer-when-downgrade"
+        ></iframe>
+        <a
+          class="ep-btn ep-btn--outline map-link"
+          href="https://maps.app.goo.gl/im7gjyhQfgTKJ2pk6"
+          target="_blank"
+          rel="noopener"
+          >Ver en Google Maps</a
+        >
+      </article>
+
+      <article
+        class="contactInfoDiv reveal"
+        id="contactInfoDiv_MEXICO"
+        data-reveal-delay="120"
+      >
+        <h2>Corporativo México</h2>
+        <p class="contact-address">
+          C. DANTE N. 36 PISO 10, COL. ANZURES, DELEGACIÓN MIGUEL HIDALGO, C.P.
+          11590 CDMX.
+        </p>
+        <div class="phoneContactDivWrapper">
+          <div class="phoneContactDiv">
+            <img src="../Assets/icons/phone_icon.png" alt="" />
+            5531 7107
+          </div>
+          <div class="phoneContactDiv">
+            <img src="../Assets/icons/phone_icon.png" alt="" />
+            5531 5034
+          </div>
+        </div>
+        <iframe
+          id="mapMexico"
+          class="mapStyle"
+          title="Mapa del Corporativo México"
+          src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d4272.2293185469425!2d-99.1775528!3d19.425472199999998!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x85d201f5839b0557%3A0x575a8bc3e0fb6316!2sEli%20Park!5e1!3m2!1sen!2sca!4v1762992623506!5m2!1sen!2sca"
+          allowfullscreen=""
+          loading="lazy"
+          referrerpolicy="no-referrer-when-downgrade"
+        ></iframe>
+        <a
+          class="ep-btn ep-btn--outline map-link"
+          href="https://maps.app.goo.gl/ngZynV3C2ChkCXNL9"
+          target="_blank"
+          rel="noopener"
+          >Ver en Google Maps</a
+        >
+      </article>
+    </div>
+
+    <!-- ========== MESSAGE FORM ========== -->
+    <section class="message-section" id="mensaje">
+      <div class="redDividerLine-container"></div>
+      <h2 class="ep-section-title">Envíanos un mensaje</h2>
+      <p class="ep-page-lead section-lead">
+        Escríbenos y nos pondremos en contacto contigo lo antes posible.
+      </p>
+
+      <div class="message-shell reveal">
+        <!-- Left: dark information panel -->
+        <aside class="message-aside" aria-label="Otras formas de contacto">
+          <img
+            src="../Assets/logo_noText.png"
+            alt=""
+            class="message-wheel"
+            loading="lazy"
+            id="messageWheel"
+          />
+
+          <span class="message-eyebrow">Atención a clientes</span>
+          <h3>Estamos para ayudarte</h3>
+          <p>
+            Cuéntanos qué necesitas para tu estacionamiento, plaza o centro
+            comercial y te responderemos lo antes posible.
+          </p>
+
+          <ul class="message-quick">
+            <li>
+              <span class="quick-icon" aria-hidden="true">
+                <svg class="ep-icon" viewBox="0 0 24 24">
+                  <path
+                    d="M5 4h4l2 5-2.5 1.5a11 11 0 0 0 5 5L15 13l5 2v4a2 2 0 0 1-2 2A16 16 0 0 1 3 6a2 2 0 0 1 2-2"
+                  />
+                </svg>
+              </span>
+              <div>
+                <span class="quick-label">Corporativo Cancún</span>
+                <span class="quick-value">0199 88853021</span>
+              </div>
+            </li>
+            <li>
+              <span class="quick-icon" aria-hidden="true">
+                <svg class="ep-icon" viewBox="0 0 24 24">
+                  <path
+                    d="M5 4h4l2 5-2.5 1.5a11 11 0 0 0 5 5L15 13l5 2v4a2 2 0 0 1-2 2A16 16 0 0 1 3 6a2 2 0 0 1 2-2"
+                  />
+                </svg>
+              </span>
+              <div>
+                <span class="quick-label">Corporativo México</span>
+                <span class="quick-value">5531 7107</span>
+              </div>
+            </li>
+            <li>
+              <span class="quick-icon" aria-hidden="true">
+                <img src="../Assets/icons/white_facebook_icon.png" alt="" />
+              </span>
+              <div>
+                <span class="quick-label">Redes sociales</span>
+                <a
+                  href="https://www.facebook.com/elipark.elipark.elipark/"
+                  target="_blank"
+                  rel="noopener"
+                  >Escríbenos en Facebook</a
+                >
+              </div>
+            </li>
+          </ul>
+
+          <p class="message-how-title">Así funciona</p>
+          <ol class="message-how">
+            <li>Llena el formulario.</li>
+            <li>Se abre tu correo con el mensaje ya escrito.</li>
+            <li>Revisa y presiona “Enviar”.</li>
+          </ol>
+        </aside>
+
+        <!-- Right: the form -->
+        <div class="message-card" id="messageCard">
+          <form id="contactForm" class="contact-form" novalidate>
+            <!-- Little road: the car drives to the parking spot as the form is completed -->
+            <div class="form-progress" aria-hidden="true">
+              <div class="progress-road" id="progressRoad">
+                <span class="progress-fill"></span>
+                <span class="progress-car">
+                  <svg viewBox="0 0 32 18">
+                    <path
+                      class="car-body"
+                      d="M2 13.5V10l3.5-1.2L9 4.5c.5-.6 1.2-1 2-1h8.5c.8 0 1.5.3 2 .9l3.7 4.1H28a2 2 0 0 1 2 2v3z"
+                    />
+                    <path class="car-window" d="M11.5 5.5h4v3h-6.6zM17.5 5.5h2l2.7 3h-4.7z" />
+                    <circle class="car-wheel" cx="9" cy="14" r="2.8" />
+                    <circle class="car-wheel" cx="24" cy="14" r="2.8" />
+                  </svg>
+                </span>
+              </div>
+              <span class="progress-goal">P</span>
+            </div>
+            <p class="progress-text" id="progressText" aria-live="polite">
+              0 de 4 campos listos
+            </p>
+
+            <!-- Step 1: topic -->
+            <fieldset class="form-step">
+              <legend>
+                <span class="step-badge">1</span> ¿Sobre qué nos escribes?
+              </legend>
+
+              <div class="topic-grid">
+                <label class="topic-option">
+                  <input
+                    type="radio"
+                    name="topic"
+                    value="Información general"
+                    data-placeholder="¿Cómo podemos ayudarte?"
+                    checked
+                  />
+                  <span class="topic-card">
+                    <span class="topic-icon">
+                      <svg class="ep-icon" viewBox="0 0 24 24">
+                        <circle cx="12" cy="12" r="9" />
+                        <path d="M12 11v5" />
+                        <path d="M12 8h.01" />
+                      </svg>
+                    </span>
+                    <span class="topic-name">Información general</span>
+                  </span>
+                </label>
+
+                <label class="topic-option">
+                  <input
+                    type="radio"
+                    name="topic"
+                    value="Estacionamientos"
+                    data-placeholder="Ej. Información sobre un estacionamiento"
+                  />
+                  <span class="topic-card">
+                    <span class="topic-icon">
+                      <svg class="ep-icon" viewBox="0 0 24 24">
+                        <rect x="3" y="3" width="18" height="18" rx="4" />
+                        <path d="M10 17V7h3.5a3 3 0 0 1 0 6H10" />
+                      </svg>
+                    </span>
+                    <span class="topic-name">Estacionamientos</span>
+                  </span>
+                </label>
+
+                <label class="topic-option">
+                  <input
+                    type="radio"
+                    name="topic"
+                    value="Valet Parking"
+                    data-placeholder="Ej. Servicio de valet parking"
+                  />
+                  <span class="topic-card">
+                    <span class="topic-icon">
+                      <svg class="ep-icon" viewBox="0 0 24 24">
+                        <circle cx="8" cy="15" r="4" />
+                        <path d="m10.8 12.2 8.2-8.2" />
+                        <path d="m16 7 2 2" />
+                        <path d="m13.5 9.5 1.5 1.5" />
+                      </svg>
+                    </span>
+                    <span class="topic-name">Valet Parking</span>
+                  </span>
+                </label>
+
+                <label class="topic-option">
+                  <input
+                    type="radio"
+                    name="topic"
+                    value="Empleo"
+                    data-placeholder="Ej. Quiero información sobre vacantes"
+                    data-hint="empleo"
+                  />
+                  <span class="topic-card">
+                    <span class="topic-icon">
+                      <svg class="ep-icon" viewBox="0 0 24 24">
+                        <rect x="3" y="7" width="18" height="13" rx="2" />
+                        <path d="M8 7V5a2 2 0 0 1 2-2h4a2 2 0 0 1 2 2v2" />
+                        <path d="M3 13h18" />
+                      </svg>
+                    </span>
+                    <span class="topic-name">Empleo</span>
+                  </span>
+                </label>
+
+                <label class="topic-option">
+                  <input
+                    type="radio"
+                    name="topic"
+                    value="Otro"
+                    data-placeholder="¿Cómo podemos ayudarte?"
+                  />
+                  <span class="topic-card">
+                    <span class="topic-icon">
+                      <svg class="ep-icon" viewBox="0 0 24 24">
+                        <path
+                          d="M21 12a8 8 0 0 1-11.6 7.1L4 20l1-4.6A8 8 0 1 1 21 12z"
+                        />
+                      </svg>
+                    </span>
+                    <span class="topic-name">Otro</span>
+                  </span>
+                </label>
+              </div>
+
+              <p class="topic-hint" id="topicHint" hidden>
+                ¿Buscas trabajo? También puedes ver cómo postularte en nuestra
+                página de <a href="empleo.html">Empleo</a>.
+              </p>
+            </fieldset>
+
+            <!-- Step 2: contact details -->
+            <fieldset class="form-step">
+              <legend><span class="step-badge">2</span> Tus datos</legend>
+
+              <div class="form-row">
+                <div class="form-group">
+                  <label for="senderName">Nombre completo *</label>
+                  <div class="input-wrap">
+                    <svg class="ep-icon" viewBox="0 0 24 24" aria-hidden="true">
+                      <circle cx="12" cy="8" r="4" />
+                      <path d="M4 21a8 8 0 0 1 16 0" />
+                    </svg>
+                    <input
+                      type="text"
+                      id="senderName"
+                      name="senderName"
+                      class="form-input"
+                      placeholder="Ej. María López"
+                      autocomplete="name"
+                      maxlength="80"
+                      required
+                    />
+                    <span class="input-check" aria-hidden="true">
+                      <svg viewBox="0 0 24 24"><path d="M5 12.5l4.5 4.5L19 7" /></svg>
+                    </span>
+                  </div>
+                  <div class="error-message" id="nameError" aria-live="polite"></div>
+                </div>
+
+                <div class="form-group">
+                  <label for="senderPhone"
+                    >Teléfono <span class="optional">(opcional)</span></label
+                  >
+                  <div class="input-wrap">
+                    <svg class="ep-icon" viewBox="0 0 24 24" aria-hidden="true">
+                      <path
+                        d="M5 4h4l2 5-2.5 1.5a11 11 0 0 0 5 5L15 13l5 2v4a2 2 0 0 1-2 2A16 16 0 0 1 3 6a2 2 0 0 1 2-2"
+                      />
+                    </svg>
+                    <input
+                      type="tel"
+                      id="senderPhone"
+                      name="senderPhone"
+                      class="form-input"
+                      placeholder="Ej. 998 123 4567"
+                      autocomplete="tel"
+                      maxlength="20"
+                    />
+                    <span class="input-check" aria-hidden="true">
+                      <svg viewBox="0 0 24 24"><path d="M5 12.5l4.5 4.5L19 7" /></svg>
+                    </span>
+                  </div>
+                  <div class="error-message" id="phoneError" aria-live="polite"></div>
+                </div>
+              </div>
+
+              <div class="form-group">
+                <label for="senderEmail">Correo electrónico *</label>
+                <div class="input-wrap">
+                  <svg class="ep-icon" viewBox="0 0 24 24" aria-hidden="true">
+                    <rect x="3" y="5" width="18" height="14" rx="2" />
+                    <path d="m3 7 9 6 9-6" />
+                  </svg>
+                  <input
+                    type="email"
+                    id="senderEmail"
+                    name="senderEmail"
+                    class="form-input"
+                    placeholder="ejemplo@correo.com"
+                    autocomplete="email"
+                    required
+                  />
+                  <span class="input-check" aria-hidden="true">
+                    <svg viewBox="0 0 24 24"><path d="M5 12.5l4.5 4.5L19 7" /></svg>
+                  </span>
+                </div>
+                <div class="error-message" id="emailError" aria-live="polite"></div>
+              </div>
+            </fieldset>
+
+            <!-- Step 3: message -->
+            <fieldset class="form-step">
+              <legend><span class="step-badge">3</span> Tu mensaje</legend>
+
+              <div class="form-group">
+                <label for="subject">Asunto *</label>
+                <div class="input-wrap">
+                  <svg class="ep-icon" viewBox="0 0 24 24" aria-hidden="true">
+                    <path d="M4 6h16M4 12h10M4 18h7" />
+                  </svg>
+                  <input
+                    type="text"
+                    id="subject"
+                    name="subject"
+                    class="form-input"
+                    placeholder="¿Cómo podemos ayudarte?"
+                    maxlength="100"
+                    required
+                  />
+                  <span class="input-check" aria-hidden="true">
+                    <svg viewBox="0 0 24 24"><path d="M5 12.5l4.5 4.5L19 7" /></svg>
+                  </span>
+                </div>
+                <div class="error-message" id="subjectError" aria-live="polite"></div>
+              </div>
+
+              <div class="form-group">
+                <label for="message">Mensaje *</label>
+                <div class="input-wrap input-wrap--textarea">
+                  <svg class="ep-icon" viewBox="0 0 24 24" aria-hidden="true">
+                    <path d="M12 20h9" />
+                    <path d="M16.5 3.5a2.1 2.1 0 0 1 3 3L7 19l-4 1 1-4z" />
+                  </svg>
+                  <textarea
+                    id="message"
+                    name="message"
+                    class="form-input form-textarea"
+                    placeholder="Escribe tu mensaje aquí (máximo 300 caracteres)"
+                    maxlength="300"
+                    rows="5"
+                    required
+                  ></textarea>
+                  <span class="input-check" aria-hidden="true">
+                    <svg viewBox="0 0 24 24"><path d="M5 12.5l4.5 4.5L19 7" /></svg>
+                  </span>
+                </div>
+                <div class="form-meta">
+                  <div class="error-message" id="messageError" aria-live="polite"></div>
+                  <div class="char-counter" id="charCounter">
+                    <svg class="char-ring" viewBox="0 0 36 36" aria-hidden="true">
+                      <circle class="ring-bg" cx="18" cy="18" r="15.5" />
+                      <circle class="ring-fill" id="charRing" cx="18" cy="18" r="15.5" />
+                    </svg>
+                    <span><span id="charCount">0</span>/300</span>
+                  </div>
+                </div>
+              </div>
+            </fieldset>
+
+            <div class="form-actions">
+              <button
+                type="submit"
+                class="ep-btn ep-btn--no-arrow submit-btn"
+                id="submitBtn"
+              >
+                <span id="btnText">Enviar mensaje</span>
+                <svg class="plane-icon" viewBox="0 0 24 24" aria-hidden="true">
+                  <path d="M22 2 11 13" />
+                  <path d="M22 2 15 22l-4-9-9-4z" />
+                </svg>
+              </button>
+              <p class="form-note">
+                Al presionar “Enviar mensaje” se abrirá tu programa de correo
+                con el mensaje ya escrito.
+              </p>
+            </div>
+          </form>
+
+          <!-- Shown after the visitor sends the form -->
+          <div class="form-success" id="formSuccess" tabindex="-1" hidden>
+            <svg class="success-check" viewBox="0 0 52 52" aria-hidden="true">
+              <circle cx="26" cy="26" r="24" />
+              <path d="M15 27l7 7 15-15" />
+            </svg>
+            <h3>¡Tu mensaje está listo!</h3>
+            <p>
+              Se abrió tu programa de correo con todo ya escrito. Solo revisa y
+              presiona <b>Enviar</b>.
+            </p>
+
+            <div class="success-fallback">
+              <p>
+                <b>¿No se abrió tu correo?</b> Copia tu mensaje y envíalo a
+                <a id="fallbackEmail" href="#"></a>
+              </p>
+              <button
+                type="button"
+                class="ep-btn ep-btn--outline ep-btn--no-arrow"
+                id="copyMessageBtn"
+              >
+                Copiar mensaje
+              </button>
+            </div>
+
+            <button type="button" class="ep-btn" id="newMessageBtn">
+              Escribir otro mensaje
+            </button>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <div id="main-footer-container"></div>
+
+    <script src="../Utilities/navBar.js"></script>
+    <script src="../Utilities/footer.js"></script>
+    <script src="../Utilities/loadingScreen.js"></script>
+    <script src="../Utilities/redDividerLine.js"></script>
+    <script src="../Utilities/contactForm.js"></script>
+    <script src="../Utilities/pageEffects.js"></script>
+  </body>
+</html>

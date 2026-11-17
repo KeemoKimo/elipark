@@ -1,0 +1,527 @@
+/* ==========================================================================
+   ELI PARK — INICIO (main.html)
+   Colors, fonts and buttons come from Utilities/theme.css
+   Slideshow styles live in Utilities/slideshow.css
+   ========================================================================== */
+
+/* ---------- Numbers strip ---------- */
+.mainPageInfo-container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 4.5rem 1.25rem 4rem;
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 2.75rem 1rem;
+}
+
+.mainPageInfo-item-container {
+  text-align: center;
+  padding: 0 0.75rem;
+}
+
+.icon-circle {
+  width: 88px;
+  height: 88px;
+  margin: 0 auto 1.1rem;
+  border-radius: 50%;
+  background-color: var(--ep-bg-soft);
+  box-shadow: inset 0 0 0 1px var(--ep-line);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition:
+    transform 0.3s ease,
+    box-shadow 0.3s ease;
+}
+
+.mainPageInfo-item-container:hover .icon-circle {
+  transform: translateY(-4px);
+  box-shadow: inset 0 0 0 2px var(--ep-red);
+}
+
+.icon-item-container {
+  width: 46px;
+  height: 46px;
+  object-fit: contain;
+}
+
+.mainPageInfo-item-container h3 {
+  margin-bottom: 0.2rem;
+  color: var(--ep-red);
+  font-weight: 800;
+  font-size: clamp(1.9rem, 1.4rem + 1.6vw, 2.7rem);
+  font-variant-numeric: tabular-nums;
+}
+
+.mainPageInfo-item-container p {
+  margin: 0;
+  color: var(--ep-muted);
+  font-weight: 600;
+  font-size: 0.98rem;
+}
+
+/* ---------- Empleo / Localidades / Quiénes somos ---------- */
+.mainPage-moreInfo-container {
+  display: flex;
+  flex-direction: column;
+}
+
+.mainPage-moreInfo-items {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 2.5rem;
+  padding: 4rem 1.5rem;
+  text-align: center;
+  background-color: var(--ep-bg-soft);
+}
+
+/* Alternate gray / white bands */
+.mainPage-moreInfo-items:nth-child(even) {
+  background-color: var(--ep-white);
+}
+
+.mainPage-moreInfo-items h3 {
+  position: relative;
+  margin: 0 0 1.1rem;
+  padding-top: 1.1rem;
+  font-weight: 800;
+  font-size: clamp(1.6rem, 1.2rem + 1.2vw, 2.2rem);
+  letter-spacing: 0.03em;
+}
+
+/* Short red line above each heading */
+.mainPage-moreInfo-items h3::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 50%;
+  width: 48px;
+  height: 4px;
+  border-radius: 4px;
+  background-color: var(--ep-red);
+  transform: translateX(-50%);
+}
+
+.mainPage-moreInfo-items p {
+  max-width: 620px;
+  margin: 0 auto 1.9rem;
+  color: var(--ep-text);
+}
+
+/* Round photo with a red ring, like the logo */
+.mainPage-moreInfo-items-roundImage {
+  width: min(72vw, 340px);
+  height: auto;
+  aspect-ratio: 1 / 1;
+  object-fit: cover;
+  border-radius: 50%;
+  border: 8px solid var(--ep-white);
+  box-shadow:
+    0 0 0 4px var(--ep-red),
+    var(--ep-shadow-lg);
+}
+
+/* ---------- Map of Mexico with city pins ---------- */
+.mx-map {
+  position: relative;
+  flex: 0 0 auto;
+  width: min(92vw, 500px);
+  margin-bottom: 2.25rem; /* room for the legend */
+}
+
+.mx-map-img {
+  display: block;
+  width: 100%;
+  height: auto;
+  filter: drop-shadow(0 18px 22px rgba(150, 10, 15, 0.22));
+}
+
+/* Gentle 3D tilt toward the mouse (set by pageEffects.js on [data-tilt]) */
+.mx-map[data-tilt] {
+  transform: perspective(900px) rotateX(var(--tilt-x, 0deg)) rotateY(var(--tilt-y, 0deg));
+  transition: transform 0.4s ease-out;
+}
+
+/* A soft shine that sweeps across the map every few seconds. It is white,
+   so it only shows on top of the red map (the page behind is white too). */
+.mx-map::after {
+  content: "";
+  position: absolute;
+  inset: 0;
+  z-index: 0;
+  pointer-events: none;
+  background: linear-gradient(
+    105deg,
+    transparent 40%,
+    rgba(255, 255, 255, 0.38) 50%,
+    transparent 60%
+  );
+  background-size: 260% 100%;
+  background-position: 120% 0;
+  animation: mapShine 7s ease-in-out 1.5s infinite;
+}
+
+@keyframes mapShine {
+  0% {
+    background-position: 120% 0;
+  }
+  35%,
+  100% {
+    background-position: -40% 0;
+  }
+}
+
+/* "17 ciudades" badge floating over the Gulf of Mexico */
+.mx-map-badge {
+  position: absolute;
+  top: 8%;
+  right: 3%;
+  z-index: 2;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 0.55rem 0.95rem 0.5rem;
+  border-top: 3px solid var(--ep-red);
+  border-radius: 10px;
+  background-color: var(--ep-white);
+  box-shadow: var(--ep-shadow);
+  line-height: 1.1;
+  animation: badgeFloat 4s ease-in-out infinite;
+}
+
+.mx-map-badge strong {
+  color: var(--ep-red);
+  font-family: var(--ep-font-head);
+  font-size: 1.7rem;
+  font-weight: 800;
+}
+
+.mx-map-badge span {
+  color: var(--ep-ink);
+  font-family: var(--ep-font-head);
+  font-size: 0.7rem;
+  font-weight: 700;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+}
+
+@keyframes badgeFloat {
+  0%,
+  100% {
+    translate: 0 0;
+  }
+  50% {
+    translate: 0 -6px;
+  }
+}
+
+/* A white dot for every city with Eli Park parking */
+.mx-pin {
+  position: absolute;
+  top: var(--y);
+  left: var(--x);
+  z-index: 1;
+  width: 14px;
+  height: 14px;
+  margin: -7px 0 0 -7px;
+  border: 3px solid var(--ep-black);
+  border-radius: 50%;
+  background-color: var(--ep-white);
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.35);
+  transition:
+    transform 0.2s ease,
+    background-color 0.2s ease,
+    border-color 0.2s ease;
+}
+
+/* Soft pulsing ring around each dot */
+.mx-pin::before {
+  content: "";
+  position: absolute;
+  inset: -8px;
+  border: 2px solid rgba(255, 255, 255, 0.9);
+  border-radius: 50%;
+  opacity: 0;
+  animation: pinPulse 2.6s ease-out infinite;
+  animation-delay: calc(var(--i, 0) * 0.16s);
+  pointer-events: none;
+}
+
+@keyframes pinPulse {
+  0% {
+    opacity: 0.9;
+    transform: scale(0.4);
+  }
+  100% {
+    opacity: 0;
+    transform: scale(1.5);
+  }
+}
+
+.mx-pin:hover,
+.mx-pin:focus-visible {
+  z-index: 3;
+  border-color: var(--ep-white);
+  background-color: var(--ep-black);
+  transform: scale(1.35);
+  outline: none;
+}
+
+/* City name that appears above the dot */
+.mx-pin-label {
+  position: absolute;
+  bottom: calc(100% + 11px);
+  left: 50%;
+  padding: 0.3rem 0.65rem;
+  border-radius: 6px;
+  background-color: var(--ep-black);
+  color: var(--ep-white);
+  font-family: var(--ep-font-head);
+  font-size: 0.72rem;
+  font-weight: 700;
+  white-space: nowrap;
+  opacity: 0;
+  transform: translate(-50%, 4px) scale(0.74); /* scale undoes the dot's zoom */
+  transform-origin: bottom center;
+  pointer-events: none;
+  transition:
+    opacity 0.2s ease,
+    transform 0.2s ease;
+}
+
+.mx-pin-label::after {
+  content: "";
+  position: absolute;
+  top: 100%;
+  left: 50%;
+  margin-left: -5px;
+  border: 5px solid transparent;
+  border-top-color: var(--ep-black);
+}
+
+.mx-pin:hover .mx-pin-label,
+.mx-pin:focus-visible .mx-pin-label {
+  opacity: 1;
+  transform: translate(-50%, 0) scale(0.74);
+}
+
+/* Pins drop onto the map one after another when it scrolls into view */
+.ep-js .mx-map .mx-pin {
+  opacity: 0;
+}
+
+.ep-js .mx-map.is-visible .mx-pin {
+  animation: pinDrop 0.5s cubic-bezier(0.3, 1.6, 0.5, 1) both;
+  animation-delay: calc(0.45s + var(--i, 0) * 0.06s);
+}
+
+@keyframes pinDrop {
+  from {
+    opacity: 0;
+    translate: 0 -16px;
+  }
+  to {
+    opacity: 1;
+    translate: 0 0;
+  }
+}
+
+.mx-map-legend {
+  position: absolute;
+  left: 0;
+  right: 0;
+  top: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.5rem;
+  margin-top: 0.4rem;
+  color: var(--ep-muted);
+  font-size: 0.88rem;
+  font-weight: 600;
+}
+
+.mx-legend-dot {
+  width: 11px;
+  height: 11px;
+  border: 2.5px solid var(--ep-black);
+  border-radius: 50%;
+  background-color: var(--ep-white);
+  box-shadow: 0 0 0 2px var(--ep-red);
+}
+
+#mainPage-moreInfo-items-eliParkLogo {
+  width: min(62vw, 300px);
+  height: auto;
+  object-fit: contain;
+  filter: drop-shadow(0 14px 18px rgba(0, 0, 0, 0.2));
+}
+
+/* ---------- Business partners ---------- */
+.partners-section {
+  padding: 0 1.25rem 4.5rem;
+}
+
+.partners-section .redDividerLine {
+  margin-top: 4.5rem;
+}
+
+.businessPartnerContainer {
+  max-width: 1160px;
+  margin: 0 auto;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 1rem;
+}
+
+.partner-logo {
+  flex: 0 1 calc(50% - 0.5rem);
+  aspect-ratio: 5 / 3;
+  padding: 0.75rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: var(--ep-white);
+  border: 1px solid var(--ep-line);
+  border-radius: var(--ep-radius);
+  transition:
+    transform 0.3s ease,
+    box-shadow 0.3s ease,
+    border-color 0.3s ease;
+}
+
+.partner-logo:hover {
+  transform: translateY(-4px);
+  border-color: transparent;
+  box-shadow: var(--ep-shadow);
+}
+
+.partner-logo img {
+  width: 100%;
+  height: 100%;
+  object-fit: contain;
+}
+
+/* ---------- Aviso de privacidad / Nuestro aval ---------- */
+.privacyContainer {
+  max-width: 1160px;
+  margin: 0 auto;
+  padding: 0 1.25rem;
+  display: grid;
+  gap: 1.5rem;
+}
+
+.privacy-card {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  padding: 2.5rem 2rem;
+  text-align: center;
+  border-radius: var(--ep-radius);
+  background-color: var(--ep-bg-soft);
+  border-top: 4px solid var(--ep-red);
+}
+
+.privacy-card h3 {
+  margin-bottom: 0.9rem;
+  font-weight: 800;
+  font-size: 1.3rem;
+  letter-spacing: 0.04em;
+}
+
+.privacy-card p {
+  margin-bottom: 1.6rem;
+  color: var(--ep-muted);
+}
+
+.NuestroAval p {
+  margin-bottom: 0;
+  max-width: 640px;
+}
+
+/* Dark card for the privacy notice */
+.AvisoDePrivacidad {
+  background-color: var(--ep-black);
+}
+
+.AvisoDePrivacidad h3 {
+  color: var(--ep-white);
+}
+
+.AvisoDePrivacidad p {
+  color: #bdbdbd;
+}
+
+/* ---------- Tablets and up (820px, iPad Air) ---------- */
+@media (min-width: 820px) {
+  .mainPage-moreInfo-items {
+    flex-direction: row;
+    gap: clamp(3rem, 6vw, 6rem);
+    padding: 5.5rem max(2.5rem, calc((100% - 1140px) / 2));
+    text-align: left;
+  }
+
+  #mainPage-moreInfo-location {
+    flex-direction: row-reverse;
+  }
+
+  .mainPage-moreInfo-items > img {
+    flex: 0 0 auto;
+  }
+
+  .mainPage-moreInfo-items-insideContainer {
+    flex: 1;
+  }
+
+  .mainPage-moreInfo-items h3::before {
+    left: 0;
+    transform: none;
+  }
+
+  .mainPage-moreInfo-items p {
+    margin-left: 0;
+  }
+
+  .mainPage-moreInfo-items-roundImage {
+    width: clamp(240px, 30vw, 360px);
+  }
+
+  .mx-map {
+    width: clamp(320px, 42vw, 540px);
+  }
+
+  #mainPage-moreInfo-items-eliParkLogo {
+    width: clamp(200px, 25vw, 300px);
+  }
+
+  .partner-logo {
+    flex-basis: calc(33.333% - 0.7rem);
+  }
+
+  .privacyContainer {
+    grid-template-columns: 1fr 1.6fr;
+  }
+}
+
+/* ---------- Desktop (992px and wider) ---------- */
+@media (min-width: 992px) {
+  .mainPageInfo-container {
+    grid-template-columns: repeat(4, 1fr);
+    gap: 0;
+    padding: 5rem 1.5rem;
+  }
+
+  /* Thin dividers between the four numbers */
+  .mainPageInfo-item-container + .mainPageInfo-item-container {
+    border-left: 1px solid var(--ep-line);
+  }
+}
+
+@media (min-width: 1100px) {
+  .partner-logo {
+    flex-basis: calc(20% - 0.8rem);
+  }
+}

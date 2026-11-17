@@ -1,0 +1,400 @@
+<!DOCTYPE html>
+<html lang="es">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta
+      name="description"
+      content="Eli Park: más de 25 años administrando y operando estacionamientos y valet parking en México."
+    />
+    <title>Eli Park | Operadora de Estacionamientos</title>
+    <link rel="icon" type="image/png" href="../Assets/logo_noText.png" />
+    <meta name="theme-color" content="#e01016" />
+    <meta property="og:type" content="website" />
+    <meta property="og:site_name" content="Eli Park" />
+    <meta property="og:locale" content="es_MX" />
+    <meta property="og:title" content="Eli Park | Operadora de Estacionamientos" />
+    <meta property="og:description" content="Eli Park: más de 25 años administrando y operando estacionamientos y valet parking en México." />
+    <link rel="apple-touch-icon" href="../Assets/logo_noText.png" />
+
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Montserrat:wght@500;600;700;800&family=Open+Sans:wght@400;600;700&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+    />
+
+    <link rel="stylesheet" href="../Utilities/theme.css" />
+    <link rel="stylesheet" href="../Utilities/navBar.css" />
+    <link rel="stylesheet" href="../Utilities/footer.css" />
+    <link rel="stylesheet" href="../Utilities/loadingScreen.css" />
+    <link rel="stylesheet" href="../Utilities/redDividerLine.css" />
+    <link rel="stylesheet" href="../Utilities/slideshow.css" />
+    <link rel="stylesheet" href="../Styling/main.css" />
+  </head>
+  <body>
+    <div id="loader-container">
+      <div id="loadingScreen" role="status" aria-label="Cargando">
+        <img src="../Assets/ELI-PARK-LOGO-LARGE.png" alt="" />
+        <div class="loader-bar"></div>
+      </div>
+    </div>
+
+    <div id="navbar-container"></div>
+
+    <h1 class="visually-hidden">
+      Eli Park, operadora de estacionamientos y valet parking en México
+    </h1>
+
+    <!-- ========== SLIDESHOW ========== -->
+    <section
+      class="photoSlider-container"
+      data-interval="6000"
+      aria-label="Eli Park en imágenes"
+    >
+      <div class="photoSlider-children active" id="photoSlider-location">
+        <img
+          src="../Assets/img_cancun/1.jpg"
+          fetchpriority="high"
+          alt="Acomodador de Eli Park junto a un auto deportivo"
+          style="object-position: 30% 50%"
+        />
+        <div class="infoDiv-slider" id="infoDiv-slider-locations">
+          <h2>31 Plazas Comerciales</h2>
+          <p>42 Puntos de Valet Parking</p>
+          <a
+            class="ep-btn btn-infoDiv-slider"
+            id="btn-infoDiv-slider-locations"
+            href="estacionamientos.html"
+            >Nuestras Ubicaciones</a
+          >
+        </div>
+      </div>
+
+      <div class="photoSlider-children" id="photoSlider-experience">
+        <img
+          src="../Assets/img_cancun/22.jpg"
+          alt="Equipo de valet parking de Eli Park"
+          style="object-position: 50% 40%"
+        />
+        <div class="infoDiv-slider" id="infoDiv-slider-experience">
+          <h2>25 años de experiencia</h2>
+          <p>En operación de estacionamientos</p>
+          <a
+            class="ep-btn btn-infoDiv-slider"
+            id="btn-infoDiv-slider-experience"
+            href="quienesSomos.html"
+            >Leer más</a
+          >
+        </div>
+      </div>
+
+      <div class="photoSlider-children" id="photoSlider-employment">
+        <img
+          src="../Assets/img_cancun/15.jpg"
+          alt="Acomodador de Eli Park mostrando las llaves de un auto"
+          style="object-position: 45% 40%"
+        />
+        <div class="infoDiv-slider" id="infoDiv-slider-employment">
+          <h2>Más de 850 empleados</h2>
+          <p>Respaldan nuestras operaciones</p>
+          <a
+            class="ep-btn btn-infoDiv-slider"
+            id="btn-infoDiv-slider-employment"
+            href="empleo.html"
+            >Bolsa de Trabajo</a
+          >
+        </div>
+      </div>
+    </section>
+
+    <!-- ========== NUMBERS ========== -->
+    <section class="mainPageInfo-container" aria-label="Eli Park en números">
+      <div
+        class="mainPageInfo-item-container reveal"
+        id="mainPageInfo-item-container-operations"
+      >
+        <div class="icon-circle">
+          <img
+            src="../Assets/icons/speedometer.png"
+            alt=""
+            class="icon-item-container"
+            loading="lazy"
+          />
+        </div>
+        <h3 data-count="50000" data-prefix="+">+50,000</h3>
+        <p>Operaciones diarias</p>
+      </div>
+
+      <div
+        class="mainPageInfo-item-container reveal"
+        id="mainPageInfo-item-container-parkingSpace"
+        data-reveal-delay="100"
+      >
+        <div class="icon-circle">
+          <img
+            src="../Assets/icons/multipleCar.png"
+            alt=""
+            class="icon-item-container"
+            loading="lazy"
+          />
+        </div>
+        <h3 data-count="49675">49,675</h3>
+        <p>Cajones de estacionamiento</p>
+      </div>
+
+      <div
+        class="mainPageInfo-item-container reveal"
+        id="mainPageInfo-item-container-employee"
+        data-reveal-delay="200"
+      >
+        <div class="icon-circle">
+          <img
+            src="../Assets/icons/valetParking.png"
+            alt=""
+            class="icon-item-container"
+            loading="lazy"
+          />
+        </div>
+        <h3 data-count="850" data-prefix="+">+850</h3>
+        <p>Empleados</p>
+      </div>
+
+      <div
+        class="mainPageInfo-item-container reveal"
+        id="mainPageInfo-item-container-locations"
+        data-reveal-delay="300"
+      >
+        <div class="icon-circle">
+          <img
+            src="../Assets/icons/locationMainPage.png"
+            alt=""
+            class="icon-item-container"
+            loading="lazy"
+          />
+        </div>
+        <h3 data-count="73" data-prefix="+">+73</h3>
+        <p>Localidades en México</p>
+      </div>
+    </section>
+
+    <!-- ========== MORE INFO (Empleo / Localidades / Quiénes somos) ========== -->
+    <div class="mainPage-moreInfo-container">
+      <section class="mainPage-moreInfo-items">
+        <img
+          src="../Assets/img_cancun/thumbs/10.jpg"
+          loading="lazy"
+          decoding="async"
+          alt="Acomodador de Eli Park en su puesto de valet parking"
+          style="object-position: 35% 50%"
+          class="mainPage-moreInfo-items-roundImage reveal"
+        />
+        <div class="mainPage-moreInfo-items-insideContainer reveal">
+          <h3>EMPLEO</h3>
+          <p>
+            Forma parte del equipo Eli Park, tenemos distintas posiciones que
+            puedes cubrir según tus características e intereses.
+            <b
+              >Ofrecemos capacitación continua, oportunidades de crecimiento
+              profesional y un ambiente laboral dinámico donde tu desarrollo es
+              nuestra prioridad.</b
+            >
+            Únete a nuestra gran familia y construye una carrera llena de logros
+            y satisfacciones profesionales.
+          </p>
+          <a
+            class="ep-btn mainPage-moreInfo-items-button"
+            id="btnEmpiezaATrabajarYa"
+            href="empleo.html"
+            >Empieza a trabajar ya</a
+          >
+        </div>
+      </section>
+
+      <section class="mainPage-moreInfo-items" id="mainPage-moreInfo-location">
+        <!-- Red map of Mexico with the Eli Park wheel, and a pin per city.
+             Each pin opens that city on the Estacionamientos page. -->
+        <div class="mx-map reveal" id="mainPage-moreInfo-items-mexicoMap" data-tilt>
+          <div class="mx-map-badge" aria-hidden="true">
+            <strong>17</strong>
+            <span>ciudades</span>
+          </div>
+          <img
+            src="../Assets/mexico-map-elipark.png"
+            alt="Mapa de México con las ciudades donde opera Eli Park"
+            class="mx-map-img"
+            width="1224"
+            height="816"
+            loading="lazy"
+            decoding="async"
+          />
+          <a class="mx-pin" href="estacionamientos.html#culiacan" style="--x: 33.4%; --y: 45.7%; --i: 0"><span class="mx-pin-label">Culiacán</span></a>
+          <a class="mx-pin" href="estacionamientos.html#monterrey" style="--x: 54.8%; --y: 41.6%; --i: 1"><span class="mx-pin-label">Monterrey</span></a>
+          <a class="mx-pin" href="estacionamientos.html#tepic" style="--x: 41%; --y: 61.1%; --i: 2"><span class="mx-pin-label">Tepic</span></a>
+          <a class="mx-pin" href="estacionamientos.html#puerto-vallarta" style="--x: 39.9%; --y: 65.4%; --i: 3"><span class="mx-pin-label">Puerto Vallarta</span></a>
+          <a class="mx-pin" href="estacionamientos.html#guadalajara" style="--x: 45.4%; --y: 64.2%; --i: 4"><span class="mx-pin-label">Guadalajara</span></a>
+          <a class="mx-pin" href="estacionamientos.html#tlaquepaque" style="--x: 46.8%; --y: 66.6%; --i: 5"><span class="mx-pin-label">Tlaquepaque</span></a>
+          <a class="mx-pin" href="estacionamientos.html#colima" style="--x: 44.5%; --y: 71.4%; --i: 6"><span class="mx-pin-label">Colima</span></a>
+          <a class="mx-pin" href="estacionamientos.html#pachuca" style="--x: 59.6%; --y: 67.2%; --i: 7"><span class="mx-pin-label">Pachuca</span></a>
+          <a class="mx-pin" href="estacionamientos.html#toluca" style="--x: 56.3%; --y: 70.8%; --i: 8"><span class="mx-pin-label">Toluca</span></a>
+          <a class="mx-pin" href="estacionamientos.html#mexico" style="--x: 58.9%; --y: 70.1%; --i: 9"><span class="mx-pin-label">Ciudad de México</span></a>
+          <a class="mx-pin" href="estacionamientos.html#cuernavaca" style="--x: 58.1%; --y: 73.6%; --i: 10"><span class="mx-pin-label">Cuernavaca</span></a>
+          <a class="mx-pin" href="estacionamientos.html#acapulco" style="--x: 56.2%; --y: 81.6%; --i: 11"><span class="mx-pin-label">Acapulco</span></a>
+          <a class="mx-pin" href="estacionamientos.html#coatzacoalcos" style="--x: 72.4%; --y: 76.3%; --i: 12"><span class="mx-pin-label">Coatzacoalcos</span></a>
+          <a class="mx-pin" href="estacionamientos.html#tuxtla-gutierrez" style="--x: 76.4%; --y: 82.4%; --i: 13"><span class="mx-pin-label">Tuxtla Gutiérrez</span></a>
+          <a class="mx-pin" href="estacionamientos.html#ciudad-del-carmen" style="--x: 80.3%; --y: 74%; --i: 14"><span class="mx-pin-label">Ciudad del Carmen</span></a>
+          <a class="mx-pin" href="estacionamientos.html#playa-del-carmen" style="--x: 93.9%; --y: 65.6%; --i: 15"><span class="mx-pin-label">Playa del Carmen</span></a>
+          <a class="mx-pin" href="estacionamientos.html#cancun" style="--x: 94.6%; --y: 62.4%; --i: 16"><span class="mx-pin-label">Cancún</span></a>
+
+          <div class="mx-map-legend">
+            <span class="mx-legend-dot" aria-hidden="true"></span>
+            Toca una ciudad para ver sus estacionamientos
+          </div>
+        </div>
+        <div
+          class="mainPage-moreInfo-items-insideContainer reveal"
+          id="mainPage-moreInfo-items-insideContainer-location"
+        >
+          <h3>NUESTRAS LOCALIDADES</h3>
+          <p>
+            <b
+              >73 estacionamientos seguros en las principales ubicaciones de
+              México.</b
+            >
+            Disfrute de calidad constante, vigilancia las 24 horas y servicio
+            profesional en cada una de nuestras ubicaciones. Nuestra trayectoria
+            nos avala como referentes en el sector, brindando soluciones
+            innovadoras y servicio de excelencia en cada uno de nuestros
+            estacionamientos a nivel nacional.
+          </p>
+          <a
+            class="ep-btn mainPage-moreInfo-items-button"
+            id="btnVerNuestrasUbicaciones"
+            href="estacionamientos.html"
+            >Ver nuestras ubicaciones</a
+          >
+        </div>
+      </section>
+
+      <section class="mainPage-moreInfo-items" id="mainPage-moreInfo-whoWeAre">
+        <img
+          src="../Assets/logo_noText.png"
+          loading="lazy"
+          decoding="async"
+          alt="Logotipo de Eli Park"
+          id="mainPage-moreInfo-items-eliParkLogo"
+          class="reveal"
+        />
+        <div class="mainPage-moreInfo-items-insideContainer reveal">
+          <h3>¿QUIÉNES SOMOS?</h3>
+          <p>
+            Somos una empresa 100% mexicana, líderes en la administración y
+            operación de estacionamientos,
+            <b>Valet Parking, Centros Comerciales y Edificios Corporativos</b>,
+            con más de veinticinco años de experiencia. Contamos con más de 73
+            ubicaciones estratégicas en todo México, ofreciendo seguridad,
+            comodidad y atención profesional a miles de clientes diariamente en
+            nuestros estacionamientos. Además, contamos con prestaciones
+            superiores y horarios flexibles para tu comodidad.
+          </p>
+          <a
+            class="ep-btn mainPage-moreInfo-items-button"
+            id="btnQuienesSomos"
+            href="quienesSomos.html"
+            >Leer más</a
+          >
+        </div>
+      </section>
+    </div>
+
+    <!-- ========== BUSINESS PARTNERS ========== -->
+    <section class="partners-section">
+      <div class="redDividerLine-container"></div>
+      <h2 id="lblBusinessPartner" class="ep-section-title">
+        Nuestros socios de negocios
+      </h2>
+
+      <div class="businessPartnerContainer">
+        <div class="partner-logo reveal" data-reveal-delay="0">
+          <img
+            loading="lazy"
+            decoding="async"
+            src="../Assets/businessPartnerLogos/CARSO-LOGO-OK-500x300_c.png"
+            alt="Grupo Carso"
+            id="img-Carso"
+          />
+        </div>
+        <div class="partner-logo reveal" data-reveal-delay="90">
+          <img
+            loading="lazy"
+            decoding="async"
+            src="../Assets/businessPartnerLogos/FIBRA-UNO-LOGO-OK-500x300_c.png"
+            alt="Fibra Uno"
+            id="img-Fibra"
+          />
+        </div>
+        <div class="partner-logo reveal" data-reveal-delay="180">
+          <img
+            loading="lazy"
+            decoding="async"
+            src="../Assets/businessPartnerLogos/GICSA-LOGO-OK-500x300_c.png"
+            alt="GICSA"
+            id="img-Gicsa"
+          />
+        </div>
+        <div class="partner-logo reveal" data-reveal-delay="270">
+          <img
+            loading="lazy"
+            decoding="async"
+            src="../Assets/businessPartnerLogos/JOMER-LOGO-OK-500x300_c.png"
+            alt="Jomer"
+            id="img-Jomer"
+          />
+        </div>
+        <div class="partner-logo reveal" data-reveal-delay="360">
+          <img
+            loading="lazy"
+            decoding="async"
+            src="../Assets/businessPartnerLogos/PARKS-LOGO_OK-500x300_c.png"
+            alt="Parks"
+            id="img-Parks"
+          />
+        </div>
+      </div>
+    </section>
+
+    <!-- ========== PRIVACY / AVAL ========== -->
+    <section class="privacyContainer">
+      <div class="AvisoDePrivacidad privacy-card reveal">
+        <h3>AVISO DE PRIVACIDAD</h3>
+        <p>Conozca nuestro aviso de privacidad.</p>
+        <a class="ep-btn" id="btnLeerAviso" href="avisoDePrivacidad.html"
+          >Leer aviso</a
+        >
+      </div>
+      <div class="NuestroAval privacy-card reveal" data-reveal-delay="120">
+        <h3>NUESTRO AVAL</h3>
+        <p>
+          Cumplimos con toda la reglamentación y disposiciones establecidas por
+          la Secretaría de Transportes y Vialidad, dando cumplimiento al
+          artículo 11 de la Ley para el Funcionamiento de Establecimientos
+          Mercantiles del Distrito Federal (tarjetones de identificación para
+          prestar el servicio de acomodadores personalizados).
+        </p>
+      </div>
+    </section>
+
+    <div id="main-footer-container"></div>
+
+    <script src="../Utilities/navBar.js"></script>
+    <script src="../Utilities/footer.js"></script>
+    <script src="../Utilities/loadingScreen.js"></script>
+    <script src="../Utilities/redDividerLine.js"></script>
+    <script src="../Utilities/slideshow.js"></script>
+    <script src="../Utilities/pageEffects.js"></script>
+  </body>
+</html>

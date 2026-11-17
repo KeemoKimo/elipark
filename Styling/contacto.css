@@ -1,0 +1,1030 @@
+/* ==========================================================================
+   ELI PARK — CONTACTO (contacto.html)
+   Colors, fonts and buttons come from Utilities/theme.css
+   The form's behavior lives in Utilities/contactForm.js
+   ========================================================================== */
+
+/* ---------- Top photo ---------- */
+#imgContacto {
+  display: block;
+  width: 100%;
+  height: clamp(260px, 55vh, 560px);
+  object-fit: cover;
+  object-position: center;
+}
+
+/* ---------- Office cards ---------- */
+.contactDivContainer {
+  max-width: 1160px;
+  margin: 3rem auto 0;
+  padding: 0 1.25rem;
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 2rem;
+}
+
+.contactInfoDiv {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 2.25rem 1.5rem 2rem;
+  text-align: center;
+  background-color: var(--ep-white);
+  border: 1px solid var(--ep-line);
+  border-top: 4px solid var(--ep-red);
+  border-radius: 14px;
+  box-shadow: var(--ep-shadow);
+}
+
+.contactInfoDiv h2 {
+  margin-bottom: 1rem;
+  color: var(--ep-red);
+  font-weight: 800;
+  font-size: clamp(1.3rem, 1.1rem + 0.8vw, 1.7rem);
+  letter-spacing: 0.03em;
+  text-transform: uppercase;
+}
+
+.contact-address {
+  max-width: 440px;
+  margin-bottom: 0;
+  color: var(--ep-muted);
+}
+
+/* Phone numbers shown as soft "pills" */
+.phoneContactDivWrapper {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 0.7rem;
+  margin-top: 1.25rem;
+}
+
+.phoneContactDiv {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.5rem;
+  padding: 0.5rem 1rem;
+  border-radius: 999px;
+  background-color: var(--ep-bg-soft);
+  color: var(--ep-ink);
+  font-weight: 600;
+}
+
+.phoneContactDiv img {
+  width: 18px;
+  height: 18px;
+}
+
+/* Embedded map */
+.mapStyle {
+  display: block;
+  width: 100%;
+  height: 260px;
+  margin-top: 1.75rem;
+  border: 0;
+  border-radius: 10px;
+  box-shadow: var(--ep-shadow-sm);
+}
+
+.map-link {
+  margin-top: 1.5rem;
+}
+
+/* ==========================================================================
+   MESSAGE SECTION
+   ========================================================================== */
+
+/* Shared line-icon style */
+.message-section .ep-icon {
+  fill: none;
+  stroke: currentColor;
+  stroke-width: 2;
+  stroke-linecap: round;
+  stroke-linejoin: round;
+}
+
+.section-lead {
+  margin-top: -1.4rem;
+  margin-bottom: 2.75rem;
+}
+
+/* Dark panel + white form card, side by side on desktop */
+.message-shell {
+  max-width: 1160px;
+  margin: 0 max(1.25rem, calc((100% - 1160px) / 2));
+  display: grid;
+  grid-template-columns: 1fr;
+  overflow: hidden;
+  background-color: var(--ep-white);
+  border: 1px solid var(--ep-line);
+  border-top: 5px solid var(--ep-red);
+  border-radius: 20px;
+  box-shadow: var(--ep-shadow-lg);
+}
+
+/* ---------- 1. Dark information panel ---------- */
+.message-aside {
+  position: relative;
+  overflow: hidden;
+  order: 2; /* on phones it comes after the form */
+  padding: 2.5rem 1.75rem;
+  background-color: var(--ep-black);
+  color: #cfcfcf;
+}
+
+/* Faint diagonal parking stripes */
+.message-aside::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  pointer-events: none;
+  background: repeating-linear-gradient(
+    -45deg,
+    rgba(255, 255, 255, 0.035) 0 2px,
+    transparent 2px 24px
+  );
+}
+
+.message-aside > * {
+  position: relative;
+}
+
+/* Big steering wheel from the logo, turning as the form is filled in */
+.message-wheel {
+  position: absolute;
+  right: -110px;
+  bottom: -110px;
+  width: 330px;
+  opacity: 0.08;
+  filter: grayscale(1) invert(1);
+  pointer-events: none;
+  transition: transform 0.9s cubic-bezier(0.2, 0.8, 0.2, 1);
+}
+
+.message-eyebrow {
+  display: inline-block;
+  padding: 0.35rem 0.8rem;
+  border-radius: 4px;
+  background-color: var(--ep-red);
+  color: var(--ep-white);
+  font-family: var(--ep-font-head);
+  font-size: 0.75rem;
+  font-weight: 700;
+  letter-spacing: 0.14em;
+  text-transform: uppercase;
+}
+
+.message-aside h3 {
+  margin: 1rem 0 0.75rem;
+  color: var(--ep-white);
+  font-weight: 800;
+  font-size: clamp(1.5rem, 1.25rem + 0.9vw, 1.9rem);
+}
+
+.message-aside p {
+  color: #b9b9b9;
+}
+
+.message-quick {
+  display: grid;
+  gap: 1rem;
+  margin: 1.75rem 0 0;
+  padding: 0;
+  list-style: none;
+}
+
+.message-quick li {
+  display: flex;
+  align-items: center;
+  gap: 0.9rem;
+}
+
+.quick-icon {
+  flex: 0 0 46px;
+  height: 46px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 12px;
+  background-color: rgba(255, 255, 255, 0.08);
+  color: #ff4a50;
+}
+
+.quick-icon .ep-icon {
+  width: 21px;
+  height: 21px;
+}
+
+.quick-icon img {
+  width: 20px;
+  height: 20px;
+}
+
+.quick-label {
+  display: block;
+  color: #959595;
+  font-size: 0.76rem;
+  font-weight: 700;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+}
+
+.quick-value,
+.message-quick a {
+  color: var(--ep-white);
+  font-size: 1.02rem;
+  font-weight: 700;
+  text-decoration: none;
+}
+
+.message-quick a:hover {
+  color: #ff4a50;
+  text-decoration: underline;
+}
+
+/* "Así funciona" — three steps on a dashed road */
+.message-aside .message-how-title {
+  margin: 2.25rem 0 1rem;
+  padding-top: 1.75rem;
+  border-top: 1px solid #2a2a2a;
+  color: var(--ep-white);
+  font-family: var(--ep-font-head);
+  font-size: 0.85rem;
+  font-weight: 700;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+}
+
+.message-how {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+  counter-reset: how;
+}
+
+.message-how li {
+  position: relative;
+  min-height: 32px;
+  padding: 0.25rem 0 1.1rem 3rem;
+  color: #d6d6d6;
+  counter-increment: how;
+}
+
+.message-how li:last-child {
+  padding-bottom: 0;
+}
+
+.message-how li::before {
+  content: counter(how);
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 32px;
+  height: 32px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 50%;
+  background-color: var(--ep-red);
+  color: var(--ep-white);
+  font-family: var(--ep-font-head);
+  font-size: 0.9rem;
+  font-weight: 800;
+  box-shadow: 0 0 0 4px var(--ep-black), 0 0 0 5px var(--ep-red);
+}
+
+/* Dashed line joining each number to the next */
+.message-how li:not(:last-child)::after {
+  content: "";
+  position: absolute;
+  top: 38px;
+  bottom: 4px;
+  left: 15px;
+  width: 2px;
+  background: repeating-linear-gradient(
+    to bottom,
+    rgba(255, 255, 255, 0.55) 0 6px,
+    transparent 6px 12px
+  );
+}
+
+/* ---------- 2. White form card ---------- */
+.message-card {
+  position: relative;
+  padding: 2rem 1.35rem 2.25rem;
+}
+
+.message-card.shake {
+  animation: cardShake 0.45s ease;
+}
+
+@keyframes cardShake {
+  20%,
+  60% {
+    transform: translateX(-6px);
+  }
+  40%,
+  80% {
+    transform: translateX(6px);
+  }
+}
+
+/* Little road with a car that drives to the "P" */
+.form-progress {
+  display: flex;
+  align-items: flex-end;
+  gap: 0.75rem;
+  padding-top: 1.75rem;
+}
+
+.progress-road {
+  --p: 0;
+  position: relative;
+  flex: 1;
+  height: 12px;
+  border-radius: 999px;
+  background-color: #262626;
+}
+
+/* Dashed center line */
+.progress-road::before {
+  content: "";
+  position: absolute;
+  top: 5px;
+  left: 8px;
+  right: 8px;
+  height: 2px;
+  background: repeating-linear-gradient(
+    to right,
+    rgba(255, 255, 255, 0.6) 0 10px,
+    transparent 10px 20px
+  );
+}
+
+/* The part already traveled turns red */
+.progress-fill {
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  width: calc(var(--p) * 100%);
+  border-radius: 999px;
+  background-color: var(--ep-red);
+  transition: width 0.6s ease;
+}
+
+/* The car drives on top of the road */
+.progress-car {
+  position: absolute;
+  bottom: 9px;
+  left: calc(var(--p) * (100% - 44px));
+  width: 44px;
+  height: 25px;
+  filter: drop-shadow(0 3px 3px rgba(0, 0, 0, 0.25));
+  transition: left 0.6s ease;
+}
+
+.progress-car svg {
+  display: block;
+  width: 100%;
+  height: 100%;
+}
+
+.car-body {
+  fill: var(--ep-red);
+}
+
+.car-window {
+  fill: #ffd9da;
+}
+
+.car-wheel {
+  fill: var(--ep-black);
+  stroke: var(--ep-white);
+  stroke-width: 1.2;
+}
+
+/* Parking sign at the end of the road */
+.progress-goal {
+  flex: 0 0 32px;
+  height: 32px;
+  margin-bottom: -10px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 7px;
+  background-color: var(--ep-black);
+  color: var(--ep-white);
+  font-family: var(--ep-font-head);
+  font-weight: 800;
+  transition:
+    background-color 0.3s ease,
+    transform 0.3s ease;
+}
+
+.form-progress.is-complete .progress-goal {
+  background-color: var(--ep-red);
+  animation: goalPop 0.5s ease;
+}
+
+.form-progress.is-complete .progress-car {
+  animation: carPark 0.5s ease 0.5s;
+}
+
+@keyframes goalPop {
+  50% {
+    transform: scale(1.18);
+  }
+}
+
+@keyframes carPark {
+  30% {
+    transform: translateY(-4px);
+  }
+  60% {
+    transform: translateY(0);
+  }
+}
+
+.progress-text {
+  margin: 0.6rem 0 0;
+  color: var(--ep-muted);
+  font-size: 0.9rem;
+  font-weight: 600;
+}
+
+.progress-text.is-complete {
+  color: var(--ep-red);
+  font-weight: 700;
+}
+
+/* ---------- Numbered sections of the form ---------- */
+.form-step {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  min-width: 0;
+}
+
+.form-step {
+  margin-top: 2rem;
+}
+
+.form-step + .form-step {
+  padding-top: 2rem;
+  border-top: 1px dashed #dedede;
+}
+
+.form-step legend {
+  float: none;
+  display: flex;
+  align-items: center;
+  gap: 0.75rem;
+  margin-bottom: 1.2rem;
+  color: var(--ep-ink);
+  font-family: var(--ep-font-head);
+  font-size: 1.15rem;
+  font-weight: 800;
+}
+
+.step-badge {
+  flex: 0 0 34px;
+  width: 34px;
+  height: 34px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 50%;
+  background-color: var(--ep-red);
+  color: var(--ep-white);
+  font-size: 0.95rem;
+  box-shadow:
+    0 0 0 3px var(--ep-white),
+    0 0 0 5px var(--ep-red);
+}
+
+/* ---------- Step 1: topic tiles ---------- */
+.topic-grid {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 0.75rem;
+}
+
+.topic-option {
+  position: relative;
+  margin: 0;
+  cursor: pointer;
+}
+
+/* The real radio button stays usable by keyboard but is invisible */
+.topic-option input {
+  position: absolute;
+  opacity: 0;
+  pointer-events: none;
+}
+
+.topic-card {
+  position: relative;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 0.55rem;
+  padding: 1rem 0.6rem;
+  text-align: center;
+  background-color: var(--ep-white);
+  border: 2px solid var(--ep-line);
+  border-radius: 12px;
+  transition:
+    border-color 0.25s ease,
+    background-color 0.25s ease,
+    transform 0.25s ease,
+    box-shadow 0.25s ease;
+}
+
+.topic-option:hover .topic-card {
+  border-color: #cfcfcf;
+  transform: translateY(-2px);
+}
+
+.topic-icon {
+  width: 46px;
+  height: 46px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 12px;
+  background-color: var(--ep-bg-soft);
+  color: var(--ep-ink);
+  transition:
+    background-color 0.25s ease,
+    color 0.25s ease;
+}
+
+.topic-icon .ep-icon {
+  width: 24px;
+  height: 24px;
+}
+
+.topic-name {
+  color: var(--ep-ink);
+  font-family: var(--ep-font-head);
+  font-size: 0.86rem;
+  font-weight: 700;
+  line-height: 1.25;
+}
+
+/* Little ✓ badge in the corner of the chosen tile */
+.topic-card::after {
+  content: "\2713";
+  position: absolute;
+  top: -9px;
+  right: -9px;
+  width: 24px;
+  height: 24px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 50%;
+  background-color: var(--ep-red);
+  color: var(--ep-white);
+  font-size: 0.75rem;
+  font-weight: 700;
+  transform: scale(0);
+  transition: transform 0.25s cubic-bezier(0.3, 1.6, 0.5, 1);
+}
+
+.topic-option input:checked + .topic-card {
+  border-color: var(--ep-red);
+  background-color: var(--ep-red-soft);
+  box-shadow: 0 6px 16px rgba(224, 16, 22, 0.14);
+}
+
+.topic-option input:checked + .topic-card .topic-icon {
+  background-color: var(--ep-red);
+  color: var(--ep-white);
+}
+
+.topic-option input:checked + .topic-card::after {
+  transform: scale(1);
+}
+
+.topic-option input:focus-visible + .topic-card {
+  outline: 3px solid var(--ep-red);
+  outline-offset: 3px;
+}
+
+.topic-hint {
+  margin: 1rem 0 0;
+  padding: 0.75rem 1rem;
+  border-left: 4px solid var(--ep-red);
+  border-radius: 8px;
+  background-color: var(--ep-bg-soft);
+  color: var(--ep-text);
+  font-size: 0.95rem;
+}
+
+.topic-hint a {
+  font-weight: 700;
+}
+
+/* ---------- Steps 2 & 3: text fields ---------- */
+.form-row {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 0 1.25rem;
+}
+
+.form-group {
+  margin-bottom: 1.1rem;
+}
+
+.form-group label {
+  display: block;
+  margin-bottom: 0.45rem;
+  color: var(--ep-ink);
+  font-family: var(--ep-font-head);
+  font-weight: 600;
+}
+
+.optional {
+  color: var(--ep-muted);
+  font-weight: 500;
+  font-size: 0.88em;
+}
+
+/* Field with an icon on the left and a ✓ on the right */
+.input-wrap {
+  position: relative;
+}
+
+.input-wrap > .ep-icon {
+  position: absolute;
+  top: 50%;
+  left: 1rem;
+  width: 20px;
+  height: 20px;
+  color: #9a9a9a;
+  transform: translateY(-50%);
+  pointer-events: none;
+  transition: color 0.25s ease;
+}
+
+.input-wrap:focus-within > .ep-icon {
+  color: var(--ep-red);
+}
+
+.form-input {
+  width: 100%;
+  padding: 0.85rem 2.8rem 0.85rem 2.9rem;
+  border: 2px solid #d9d9d9;
+  border-radius: 10px;
+  background-color: var(--ep-white);
+  color: var(--ep-ink);
+  font-size: 1.05rem;
+  font-family: inherit;
+  transition:
+    border-color 0.25s ease,
+    box-shadow 0.25s ease;
+}
+
+.form-input::placeholder {
+  color: #a3a3a3;
+}
+
+.form-input:focus {
+  outline: none;
+  border-color: var(--ep-red);
+  box-shadow: 0 0 0 4px rgba(224, 16, 22, 0.12);
+}
+
+.form-textarea {
+  min-height: 150px;
+  resize: vertical;
+}
+
+.input-wrap--textarea > .ep-icon {
+  top: 1.05rem;
+  transform: none;
+}
+
+.input-check {
+  position: absolute;
+  top: 50%;
+  right: 0.9rem;
+  width: 22px;
+  height: 22px;
+  margin-top: -11px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 50%;
+  background-color: #1e8e3e;
+  transform: scale(0);
+  transition: transform 0.3s cubic-bezier(0.3, 1.6, 0.5, 1);
+  pointer-events: none;
+}
+
+.input-wrap--textarea .input-check {
+  top: 0.95rem;
+  margin-top: 0;
+}
+
+.input-check svg {
+  width: 13px;
+  height: 13px;
+  fill: none;
+  stroke: var(--ep-white);
+  stroke-width: 3;
+  stroke-linecap: round;
+  stroke-linejoin: round;
+}
+
+.form-group.is-valid .input-check {
+  transform: scale(1);
+}
+
+.form-group.is-valid .form-input:not(:focus) {
+  border-color: #b7dbc2;
+}
+
+.form-group.has-error .form-input {
+  border-color: var(--ep-red);
+  background-color: #fffafa;
+}
+
+.form-group.has-error .input-wrap > .ep-icon {
+  color: var(--ep-red);
+}
+
+.error-message {
+  min-height: 1.3rem;
+  margin-top: 0.3rem;
+  color: var(--ep-red);
+  font-size: 0.9rem;
+  font-weight: 600;
+}
+
+/* Error text and the round character counter on the same line */
+.form-meta {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  gap: 1rem;
+}
+
+.char-counter {
+  flex: 0 0 auto;
+  display: flex;
+  align-items: center;
+  gap: 0.45rem;
+  margin-top: 0.3rem;
+  color: var(--ep-muted);
+  font-size: 0.88rem;
+  font-weight: 600;
+}
+
+.char-ring {
+  width: 24px;
+  height: 24px;
+  transform: rotate(-90deg);
+}
+
+.char-ring circle {
+  fill: none;
+  stroke-width: 4;
+}
+
+.ring-bg {
+  stroke: #e6e6e6;
+}
+
+.ring-fill {
+  stroke: var(--ep-ink);
+  stroke-linecap: round;
+  stroke-dasharray: 97.4;
+  stroke-dashoffset: 97.4;
+  transition:
+    stroke-dashoffset 0.2s ease,
+    stroke 0.2s ease;
+}
+
+.char-counter.is-near {
+  color: #b26a00;
+}
+.char-counter.is-near .ring-fill {
+  stroke: #e0a100;
+}
+.char-counter.is-limit {
+  color: var(--ep-red);
+}
+.char-counter.is-limit .ring-fill {
+  stroke: var(--ep-red);
+}
+
+/* ---------- Send button ---------- */
+.form-actions {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 0.9rem;
+  margin-top: 1.5rem;
+  text-align: center;
+}
+
+.submit-btn {
+  width: 100%;
+  overflow: hidden;
+}
+
+.plane-icon {
+  width: 20px;
+  height: 20px;
+  fill: none;
+  stroke: currentColor;
+  stroke-width: 2;
+  stroke-linecap: round;
+  stroke-linejoin: round;
+  transition: transform 0.3s ease;
+}
+
+.submit-btn:hover .plane-icon {
+  transform: translate(3px, -3px);
+}
+
+/* The paper plane flies away when the message is sent */
+.submit-btn.is-sending .plane-icon {
+  animation: planeFly 0.7s ease-in forwards;
+}
+
+@keyframes planeFly {
+  0% {
+    transform: none;
+    opacity: 1;
+  }
+  25% {
+    transform: translate(-5px, 5px);
+  }
+  100% {
+    transform: translate(70px, -45px) rotate(12deg);
+    opacity: 0;
+  }
+}
+
+.submit-btn:disabled {
+  background-color: var(--ep-red-dark);
+  border-color: var(--ep-red-dark);
+  cursor: progress;
+}
+
+.form-note {
+  margin: 0;
+  color: var(--ep-muted);
+  font-size: 0.9rem;
+}
+
+/* ---------- 3. "Message ready" screen ---------- */
+.form-success {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 1.5rem 0 0.5rem;
+  text-align: center;
+  outline: none;
+  animation: epReveal 0.6s ease both;
+}
+
+.form-success[hidden] {
+  display: none;
+}
+
+.success-check {
+  width: 88px;
+  height: 88px;
+  margin-bottom: 1.25rem;
+}
+
+.success-check circle {
+  fill: var(--ep-red-soft);
+  stroke: var(--ep-red);
+  stroke-width: 3;
+  stroke-dasharray: 151;
+  stroke-dashoffset: 151;
+  animation: drawStroke 0.6s ease forwards;
+}
+
+.success-check path {
+  fill: none;
+  stroke: var(--ep-red);
+  stroke-width: 4;
+  stroke-linecap: round;
+  stroke-linejoin: round;
+  stroke-dasharray: 40;
+  stroke-dashoffset: 40;
+  animation: drawStroke 0.4s ease 0.5s forwards;
+}
+
+@keyframes drawStroke {
+  to {
+    stroke-dashoffset: 0;
+  }
+}
+
+.form-success h3 {
+  margin-bottom: 0.6rem;
+  font-weight: 800;
+  font-size: clamp(1.5rem, 1.25rem + 1vw, 2rem);
+}
+
+.form-success > p {
+  max-width: 460px;
+  color: var(--ep-text);
+}
+
+.success-fallback {
+  max-width: 480px;
+  margin: 1rem 0 1.75rem;
+  padding: 1.25rem 1.5rem 1.4rem;
+  border: 1px dashed #d4d4d4;
+  border-radius: 12px;
+  background-color: var(--ep-bg-soft);
+}
+
+.success-fallback p {
+  margin-bottom: 1rem;
+  color: var(--ep-text);
+  font-size: 0.95rem;
+  overflow-wrap: anywhere;
+}
+
+/* Phones: the last tile ("Otro") takes the full row instead of sitting alone */
+@media (max-width: 575px) {
+  .topic-option:last-child:nth-child(odd) {
+    grid-column: 1 / -1;
+  }
+}
+
+/* ==========================================================================
+   Bigger screens
+   ========================================================================== */
+@media (min-width: 576px) {
+  .form-row {
+    grid-template-columns: 1fr 1fr;
+  }
+
+  .topic-grid {
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+  }
+
+  .submit-btn {
+    width: auto;
+    min-width: 300px;
+  }
+}
+
+@media (min-width: 768px) {
+  .message-card {
+    padding: 2.5rem 2.75rem 2.75rem;
+  }
+
+  .message-aside {
+    padding: 2.75rem 2.5rem;
+  }
+}
+
+@media (min-width: 992px) {
+  #imgContacto {
+    width: calc(100% - 3rem);
+    margin: 1.5rem auto 0;
+    border-radius: 14px;
+    box-shadow: var(--ep-shadow);
+  }
+
+  .contactDivContainer {
+    grid-template-columns: 1fr 1fr;
+    gap: 2.5rem;
+  }
+
+  .contactInfoDiv {
+    padding: 2.5rem 2rem 2.25rem;
+  }
+
+  .mapStyle {
+    height: 320px;
+  }
+
+  /* Dark panel on the left, form on the right */
+  .message-shell {
+    grid-template-columns: minmax(0, 0.85fr) minmax(0, 1.6fr);
+  }
+
+  .message-aside {
+    order: 0;
+    padding: 3rem 2.5rem;
+  }
+
+  .message-card {
+    padding: 3rem 3rem 3.25rem;
+  }
+}

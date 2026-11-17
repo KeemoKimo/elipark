@@ -1,0 +1,98 @@
+/* ==========================================================================
+   ELI PARK — LOADING SCREEN & PAGE TRANSITIONS
+   The markup lives in each page's HTML (top of <body>) so it shows from the
+   very first moment. Utilities/loadingScreen.js fades it in and out.
+   ========================================================================== */
+
+#loadingScreen {
+  position: fixed;
+  inset: 0;
+  z-index: 10050;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 1.75rem;
+  background-color: #fff;
+  opacity: 1;
+  visibility: visible;
+  transition:
+    opacity 0.45s ease,
+    visibility 0.45s ease;
+}
+
+/* Fading out once the page is ready */
+#loadingScreen.fade-out {
+  opacity: 0;
+  visibility: hidden;
+  pointer-events: none;
+}
+
+/* Fading back in (quicker) right before going to another page */
+#loadingScreen.is-leaving {
+  transition-duration: 0.28s;
+}
+
+#loadingScreen img {
+  width: 7rem;
+  max-width: 7rem;
+  height: auto;
+  animation: loaderPulse 1.6s ease-in-out infinite;
+}
+
+/* Thin red bar that slides back and forth under the logo */
+.loader-bar {
+  position: relative;
+  width: 120px;
+  height: 3px;
+  overflow: hidden;
+  border-radius: 3px;
+  background-color: #eeeeee;
+}
+
+.loader-bar::after {
+  content: "";
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  width: 40%;
+  border-radius: 3px;
+  background-color: var(--ep-red, #e01016);
+  animation: loaderSlide 1.1s ease-in-out infinite;
+}
+
+/* Starts fully visible so the logo looks the same from one page to the next */
+@keyframes loaderPulse {
+  0%,
+  100% {
+    opacity: 1;
+    transform: scale(1);
+  }
+  50% {
+    opacity: 0.45;
+    transform: scale(0.96);
+  }
+}
+
+@keyframes loaderSlide {
+  0% {
+    transform: translateX(-100%);
+  }
+  100% {
+    transform: translateX(250%);
+  }
+}
+
+/* Safety net: if the script ever fails to load, never leave the logo
+   covering the page */
+html:not(.ep-loader-js) #loadingScreen {
+  animation: loaderFailsafe 0.4s ease 2s forwards;
+}
+
+@keyframes loaderFailsafe {
+  to {
+    opacity: 0;
+    visibility: hidden;
+  }
+}

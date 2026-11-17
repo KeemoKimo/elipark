@@ -1,0 +1,396 @@
+<!DOCTYPE html>
+<html lang="es">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta
+      name="description"
+      content="Bolsa de trabajo de Eli Park: conoce por qué trabajar con nosotros y cómo postularte en Cancún o Ciudad de México."
+    />
+    <title>Empleo | Eli Park</title>
+    <link rel="icon" type="image/png" href="../Assets/logo_noText.png" />
+    <meta name="theme-color" content="#e01016" />
+    <meta property="og:type" content="website" />
+    <meta property="og:site_name" content="Eli Park" />
+    <meta property="og:locale" content="es_MX" />
+    <meta property="og:title" content="Empleo | Eli Park" />
+    <meta property="og:description" content="Bolsa de trabajo de Eli Park: conoce por qué trabajar con nosotros y cómo postularte en Cancún o Ciudad de México." />
+    <link rel="apple-touch-icon" href="../Assets/logo_noText.png" />
+
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Montserrat:wght@500;600;700;800&family=Open+Sans:wght@400;600;700&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+    />
+
+    <link rel="stylesheet" href="../Utilities/theme.css" />
+    <link rel="stylesheet" href="../Utilities/navBar.css" />
+    <link rel="stylesheet" href="../Utilities/redDividerLine.css" />
+    <link rel="stylesheet" href="../Utilities/footer.css" />
+    <link rel="stylesheet" href="../Utilities/loadingScreen.css" />
+    <link rel="stylesheet" href="../Utilities/slideshow.css" />
+    <link rel="stylesheet" href="../Styling/empleo.css" />
+  </head>
+  <body>
+    <div id="loader-container">
+      <div id="loadingScreen" role="status" aria-label="Cargando">
+        <img src="../Assets/ELI-PARK-LOGO-LARGE.png" alt="" />
+        <div class="loader-bar"></div>
+      </div>
+    </div>
+
+    <div id="navbar-container"></div>
+
+    <!-- ========== HERO: slideshow with a fixed message on top ========== -->
+    <section
+      class="photoSlider-container has-captions empleo-hero"
+      data-interval="5000"
+      aria-label="Bolsa de trabajo Eli Park"
+    >
+      <div class="photoSlider-children active">
+        <img
+          src="../Assets/img_cancun/5.jpg"
+          alt="Acomodador de Eli Park en su puesto de trabajo"
+          style="object-position: 62% 50%"
+          fetchpriority="high"
+        />
+      </div>
+      <div class="photoSlider-children">
+        <img
+          src="../Assets/img_cancun/17.jpg"
+          alt="Personal de Eli Park atendiendo a un cliente"
+          style="object-position: 40% 50%"
+        />
+      </div>
+      <div class="photoSlider-children">
+        <img
+          src="../Assets/img_cancun/18.jpg"
+          alt="Acomodador de Eli Park registrando un vehículo"
+          style="object-position: 30% 50%"
+        />
+      </div>
+      <div class="photoSlider-children">
+        <img
+          src="../Assets/img_cancun/8.jpg"
+          alt="Acomodador de Eli Park en una plaza comercial"
+          style="object-position: 35% 50%"
+        />
+      </div>
+      <div class="photoSlider-children">
+        <img
+          src="../Assets/img_cancun/3.jpg"
+          alt="Acomodador de Eli Park junto a un auto"
+          style="object-position: 62% 50%"
+        />
+      </div>
+
+      <div class="infoDiv-slider infoDiv-slider--static">
+        <span class="hero-eyebrow">Bolsa de trabajo</span>
+        <h1 id="lblEmpleo">Forma parte de la familia Eli Park</h1>
+        <p>
+          Más de 850 colaboradores respaldan nuestras operaciones en todo
+          México.
+        </p>
+        <div class="hero-actions">
+          <a class="ep-btn" href="#como-postularte">Cómo postularte</a>
+          <a class="ep-btn ep-btn--ghost" href="#contacto-rh"
+            >Contactar a RR. HH.</a
+          >
+        </div>
+      </div>
+    </section>
+
+    <!-- ========== WHY WORK WITH US ========== -->
+    <section class="benefits-section">
+      <div class="redDividerLine-container"></div>
+      <h2 class="ep-section-title">¿Por qué trabajar en Eli Park?</h2>
+      <p class="ep-page-lead section-lead">
+        Tenemos distintas posiciones que puedes cubrir según tus
+        características e intereses. Únete a nuestra gran familia y construye
+        una carrera llena de logros y satisfacciones profesionales.
+      </p>
+
+      <div class="benefits-grid">
+        <div class="benefit-card reveal">
+          <div class="benefit-icon" aria-hidden="true">
+            <svg viewBox="0 0 24 24">
+              <path d="M2 4h6a4 4 0 0 1 4 4v12a3 3 0 0 0-3-3H2z" />
+              <path d="M22 4h-6a4 4 0 0 0-4 4v12a3 3 0 0 1 3-3h7z" />
+            </svg>
+          </div>
+          <h3>Capacitación continua</h3>
+          <p>Aprende y mejora tus habilidades con capacitación constante.</p>
+        </div>
+
+        <div class="benefit-card reveal" data-reveal-delay="100">
+          <div class="benefit-icon" aria-hidden="true">
+            <svg viewBox="0 0 24 24">
+              <polyline points="3 17 9 11 13 15 21 7" />
+              <polyline points="14 7 21 7 21 14" />
+            </svg>
+          </div>
+          <h3>Crecimiento profesional</h3>
+          <p>Oportunidades para avanzar y desarrollarte dentro de la empresa.</p>
+        </div>
+
+        <div class="benefit-card reveal" data-reveal-delay="200">
+          <div class="benefit-icon" aria-hidden="true">
+            <svg viewBox="0 0 24 24">
+              <path d="M12 3l8 3v6c0 5-3.5 8-8 9-4.5-1-8-4-8-9V6z" />
+              <path d="M9 12l2 2 4-4" />
+            </svg>
+          </div>
+          <h3>Prestaciones superiores</h3>
+          <p>Contamos con prestaciones superiores para nuestros colaboradores.</p>
+        </div>
+
+        <div class="benefit-card reveal">
+          <div class="benefit-icon" aria-hidden="true">
+            <svg viewBox="0 0 24 24">
+              <circle cx="12" cy="12" r="9" />
+              <path d="M12 7v5l3 2" />
+            </svg>
+          </div>
+          <h3>Horarios flexibles</h3>
+          <p>Horarios pensados para tu comodidad.</p>
+        </div>
+
+        <div class="benefit-card reveal" data-reveal-delay="100">
+          <div class="benefit-icon" aria-hidden="true">
+            <svg viewBox="0 0 24 24">
+              <circle cx="9" cy="8" r="3.5" />
+              <path d="M2.5 20a6.5 6.5 0 0 1 13 0" />
+              <circle cx="17" cy="9" r="2.5" />
+              <path d="M16 14.6a5 5 0 0 1 5.5 5.4" />
+            </svg>
+          </div>
+          <h3>Ambiente dinámico</h3>
+          <p>Un equipo donde tu desarrollo es nuestra prioridad.</p>
+        </div>
+
+        <div class="benefit-card reveal" data-reveal-delay="200">
+          <div class="benefit-icon" aria-hidden="true">
+            <svg viewBox="0 0 24 24">
+              <circle cx="12" cy="9" r="6" />
+              <path d="M8.5 14 7 22l5-3 5 3-1.5-8" />
+            </svg>
+          </div>
+          <h3>Una empresa sólida</h3>
+          <p>100% mexicana, con más de 25 años de experiencia.</p>
+        </div>
+      </div>
+    </section>
+
+    <!-- ========== NUMBERS BAND ========== -->
+    <section class="empleo-stats" aria-label="Eli Park en números">
+      <div class="empleo-stats-inner">
+        <div class="empleo-stat reveal">
+          <span class="empleo-stat-number" data-count="850" data-prefix="+"
+            >+850</span
+          >
+          <span class="empleo-stat-label">Colaboradores</span>
+        </div>
+        <div class="empleo-stat reveal" data-reveal-delay="120">
+          <span class="empleo-stat-number" data-count="73" data-prefix="+"
+            >+73</span
+          >
+          <span class="empleo-stat-label">Localidades en México</span>
+        </div>
+        <div class="empleo-stat reveal" data-reveal-delay="240">
+          <span class="empleo-stat-number" data-count="25" data-prefix="+"
+            >+25</span
+          >
+          <span class="empleo-stat-label">Años de experiencia</span>
+        </div>
+      </div>
+    </section>
+
+    <!-- ========== HOW TO APPLY (drawn as a road) ========== -->
+    <section class="steps-section" id="como-postularte">
+      <div class="redDividerLine-container"></div>
+      <h2 class="ep-section-title">¿Cómo postularte?</h2>
+
+      <ol class="steps">
+        <li class="step reveal">
+          <span class="step-number">1</span>
+          <h3>Elige tu oficina</h3>
+          <p>Cancún o Ciudad de México: escoge la más cercana a ti.</p>
+        </li>
+        <li class="step reveal" data-reveal-delay="150">
+          <span class="step-number">2</span>
+          <h3>Envíanos tu CV</h3>
+          <p>
+            Escríbenos por correo o llámanos a la extensión de Recursos
+            Humanos.
+          </p>
+        </li>
+        <li class="step reveal" data-reveal-delay="300">
+          <span class="step-number">3</span>
+          <h3>Recibe respuesta</h3>
+          <p>Recursos Humanos revisará tu información y te dará seguimiento.</p>
+        </li>
+      </ol>
+    </section>
+
+    <!-- ========== HR CONTACTS ========== -->
+    <section class="rh-section" id="contacto-rh">
+      <div class="redDividerLine-container"></div>
+      <h2 class="ep-section-title">Contacta a Recursos Humanos</h2>
+      <p id="lblDescription_empleo" class="ep-page-lead section-lead">
+        ¿Buscas oportunidades con nosotros? Consulta la información que figura
+        a continuación para conocer los datos de contacto de la oficina de
+        recursos humanos de nuestras oficinas principales.
+      </p>
+
+      <div class="empleoDivContainer">
+        <article class="empleoInfoDiv reveal" id="empleoInfoDiv_CANCUN">
+          <div class="empleoInfoDiv-media">
+            <img
+              src="../Assets/parking-card-images/cancun.jpg"
+              alt=""
+              class="empleoInfoDiv_IMG"
+              loading="lazy"
+              decoding="async"
+              id="empleoInfoDiv_IMG_CANCUN"
+            />
+            <span class="empleoInfoDiv-city">Cancún</span>
+          </div>
+          <div class="empleoInfoDiv-body">
+            <h3>Recursos Humanos Cancún</h3>
+            <ul class="rh-details">
+              <li>
+                <span class="rh-icon" aria-hidden="true">
+                  <svg viewBox="0 0 24 24">
+                    <rect x="3" y="5" width="18" height="14" rx="2" />
+                    <path d="m3 7 9 6 9-6" />
+                  </svg>
+                </span>
+                <div>
+                  <span class="rh-label">Correo</span>
+                  <a href="mailto:rhumanoscancun@elipark.com"
+                    >rhumanoscancun@elipark.com</a
+                  >
+                </div>
+              </li>
+              <li>
+                <span class="rh-icon" aria-hidden="true">
+                  <svg viewBox="0 0 24 24">
+                    <path
+                      d="M5 4h4l2 5-2.5 1.5a11 11 0 0 0 5 5L15 13l5 2v4a2 2 0 0 1-2 2A16 16 0 0 1 3 6a2 2 0 0 1 2-2"
+                    />
+                  </svg>
+                </span>
+                <div>
+                  <span class="rh-label"
+                    >Teléfonos <span class="rh-ext">Ext. 104</span></span
+                  >
+                  <span class="rh-phone">019988853021</span>
+                  <span class="rh-phone">019988406417</span>
+                </div>
+              </li>
+            </ul>
+            <a
+              class="ep-btn rh-cta"
+              href="mailto:rhumanoscancun@elipark.com?subject=Solicitud%20de%20empleo%20-%20Canc%C3%BAn"
+              >Enviar mi CV</a
+            >
+          </div>
+        </article>
+
+        <article
+          class="empleoInfoDiv reveal"
+          id="empleoInfoDiv_MEXICO"
+          data-reveal-delay="120"
+        >
+          <div class="empleoInfoDiv-media">
+            <img
+              src="../Assets/parking-card-images/cdmx.jpg"
+              alt=""
+              class="empleoInfoDiv_IMG"
+              loading="lazy"
+              decoding="async"
+              id="empleoInfoDiv_IMG_MEXICO"
+            />
+            <span class="empleoInfoDiv-city">Ciudad de México</span>
+          </div>
+          <div class="empleoInfoDiv-body">
+            <h3>Recursos Humanos México</h3>
+            <ul class="rh-details">
+              <li>
+                <span class="rh-icon" aria-hidden="true">
+                  <svg viewBox="0 0 24 24">
+                    <rect x="3" y="5" width="18" height="14" rx="2" />
+                    <path d="m3 7 9 6 9-6" />
+                  </svg>
+                </span>
+                <div>
+                  <span class="rh-label">Correo</span>
+                  <a href="mailto:rhumanos@elipark.com">rhumanos@elipark.com</a>
+                </div>
+              </li>
+              <li>
+                <span class="rh-icon" aria-hidden="true">
+                  <svg viewBox="0 0 24 24">
+                    <path
+                      d="M5 4h4l2 5-2.5 1.5a11 11 0 0 0 5 5L15 13l5 2v4a2 2 0 0 1-2 2A16 16 0 0 1 3 6a2 2 0 0 1 2-2"
+                    />
+                  </svg>
+                </span>
+                <div>
+                  <span class="rh-label"
+                    >Teléfonos <span class="rh-ext">Ext. 114</span></span
+                  >
+                  <span class="rh-phone">55317107</span>
+                  <span class="rh-phone">55315034</span>
+                  <span class="rh-phone">55310445</span>
+                </div>
+              </li>
+            </ul>
+            <a
+              class="ep-btn rh-cta"
+              href="mailto:rhumanos@elipark.com?subject=Solicitud%20de%20empleo%20-%20Ciudad%20de%20M%C3%A9xico"
+              >Enviar mi CV</a
+            >
+          </div>
+        </article>
+      </div>
+
+      <p class="rh-note">
+        Al presionar “Enviar mi CV” se abrirá tu correo con el asunto ya
+        escrito. Solo adjunta tu currículum y envíalo.
+      </p>
+    </section>
+
+    <!-- ========== FACEBOOK CALL-TO-ACTION ========== -->
+    <section class="empleo-cta reveal">
+      <div class="empleo-cta-text">
+        <h2>Entérate de nuestras vacantes</h2>
+        <p>
+          Publicamos nuestras vacantes y novedades en nuestra página de
+          Facebook.
+        </p>
+      </div>
+      <a
+        class="ep-btn ep-btn--white"
+        href="https://www.facebook.com/elipark.elipark.elipark/"
+        target="_blank"
+        rel="noopener"
+        >Ver vacantes en Facebook</a
+      >
+    </section>
+
+    <div id="main-footer-container"></div>
+
+    <script src="../Utilities/navBar.js"></script>
+    <script src="../Utilities/redDividerLine.js"></script>
+    <script src="../Utilities/footer.js"></script>
+    <script src="../Utilities/loadingScreen.js"></script>
+    <script src="../Utilities/slideshow.js"></script>
+    <script src="../Utilities/pageEffects.js"></script>
+  </body>
+</html>

@@ -1,0 +1,255 @@
+/* ==========================================================================
+   ELI PARK — TOP MENU
+   ========================================================================== */
+
+/* The menu stays at the top while scrolling */
+#navbar-container {
+  position: sticky;
+  top: 0;
+  z-index: 1030;
+}
+
+#mainNavbar {
+  min-height: 76px;
+  padding: 0.6rem clamp(1rem, 3vw, 2.5rem);
+  border-bottom: 1px solid var(--ep-line, #e7e7e7);
+  transition: box-shadow 0.3s ease;
+}
+
+#mainNavbar.is-scrolled {
+  box-shadow: 0 6px 22px rgba(0, 0, 0, 0.08);
+}
+
+.customizedBrand {
+  margin: 0;
+  padding: 0;
+}
+
+#nav_imgLogo {
+  display: block;
+  height: 34px;
+  width: auto;
+  transition: opacity 0.2s ease;
+}
+
+.customizedBrand:hover #nav_imgLogo {
+  opacity: 0.85;
+}
+
+#mainNavbar .desktop_sideBar a {
+  font-family: var(--ep-font-head, "Montserrat", sans-serif);
+  font-weight: 600;
+  color: var(--ep-ink, #1c1c1c);
+}
+
+/* ---------- Desktop (992px and wider) ---------- */
+@media (min-width: 992px) {
+  .desktop_sideBar {
+    margin-left: auto;
+    align-items: center;
+    gap: 0.25rem;
+  }
+
+  #mainNavbar .desktop_sideBar a {
+    position: relative;
+    padding: 0.55rem 0.85rem;
+    font-size: 0.92rem;
+    transition: color 0.2s ease;
+  }
+
+  /* Red underline that grows on hover and stays on the current page */
+  #mainNavbar .desktop_sideBar a::after {
+    content: "";
+    position: absolute;
+    left: 0.85rem;
+    right: 0.85rem;
+    bottom: 0.2rem;
+    height: 2px;
+    border-radius: 2px;
+    background-color: var(--ep-red, #e01016);
+    transform: scaleX(0);
+    transform-origin: left;
+    transition: transform 0.25s ease;
+  }
+
+  #mainNavbar .desktop_sideBar a:hover,
+  #mainNavbar .desktop_sideBar a.active {
+    color: var(--ep-red, #e01016);
+  }
+
+  #mainNavbar .desktop_sideBar a:hover::after,
+  #mainNavbar .desktop_sideBar a.active::after {
+    transform: scaleX(1);
+  }
+}
+
+@media (min-width: 992px) and (max-width: 1120px) {
+  #mainNavbar .desktop_sideBar a {
+    padding: 0.55rem 0.55rem;
+    font-size: 0.84rem;
+  }
+
+  #mainNavbar .desktop_sideBar a::after {
+    left: 0.55rem;
+    right: 0.55rem;
+  }
+}
+
+/* ---------- Phones & tablets (below 992px) ---------- */
+@media (max-width: 991.98px) {
+  #mainNavbar {
+    position: relative;
+    z-index: 1050;
+    min-height: 66px;
+  }
+
+  #nav_imgLogo {
+    height: 28px;
+  }
+
+  /* Hamburger button: three bars that turn into an X */
+  .custom-toggler {
+    position: relative;
+    z-index: 1060;
+    width: 46px;
+    height: 46px;
+    padding: 0;
+    border: none;
+    background: transparent;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    box-shadow: none !important;
+  }
+
+  .toggler-bars {
+    position: relative;
+    display: block;
+    width: 26px;
+    height: 18px;
+  }
+
+  .toggler-bars span {
+    position: absolute;
+    left: 0;
+    width: 100%;
+    height: 2.5px;
+    border-radius: 2px;
+    background-color: var(--ep-ink, #1c1c1c);
+    transition:
+      top 0.3s ease,
+      transform 0.3s ease,
+      opacity 0.2s ease,
+      background-color 0.3s ease;
+  }
+
+  .toggler-bars span:nth-child(1) {
+    top: 0;
+  }
+  .toggler-bars span:nth-child(2) {
+    top: 7.75px;
+  }
+  .toggler-bars span:nth-child(3) {
+    top: 15.5px;
+  }
+
+  .custom-toggler[aria-expanded="true"] .toggler-bars span {
+    background-color: #fff;
+  }
+  .custom-toggler[aria-expanded="true"] .toggler-bars span:nth-child(1) {
+    top: 7.75px;
+    transform: rotate(45deg);
+  }
+  .custom-toggler[aria-expanded="true"] .toggler-bars span:nth-child(2) {
+    opacity: 0;
+  }
+  .custom-toggler[aria-expanded="true"] .toggler-bars span:nth-child(3) {
+    top: 7.75px;
+    transform: rotate(-45deg);
+  }
+
+  /* Full-screen black menu that slides down */
+  .fullscreen_mobileOverlay {
+    position: fixed !important;
+    inset: 0;
+    width: 100vw;
+    height: 100vh !important;
+    height: 100dvh !important;
+    z-index: 1040;
+    display: flex !important;
+    align-items: center;
+    justify-content: center;
+    background-color: var(--ep-black, #111);
+    border-top: 4px solid var(--ep-red, #e01016);
+    transform: translateY(-100%);
+    visibility: hidden;
+    transition:
+      transform 0.45s cubic-bezier(0.77, 0, 0.18, 1),
+      visibility 0s linear 0.45s;
+  }
+
+  .fullscreen_mobileOverlay.show {
+    transform: translateY(0);
+    visibility: visible;
+    transition:
+      transform 0.45s cubic-bezier(0.77, 0, 0.18, 1),
+      visibility 0s;
+  }
+
+  #mainNavbar .navbar-nav {
+    flex-direction: column;
+    gap: 0.6rem;
+    text-align: center;
+  }
+
+  #mainNavbar .navbar-nav a {
+    color: #fff;
+    font-size: 1.55rem;
+    font-weight: 500;
+    padding: 0.4rem 1rem;
+    opacity: 0;
+    transform: translateY(14px);
+    transition:
+      opacity 0.35s ease,
+      transform 0.35s ease,
+      color 0.2s ease;
+  }
+
+  /* Links appear one after another once the menu has opened */
+  #mainNavbar .fullscreen_mobileOverlay.show .navbar-nav a {
+    opacity: 1;
+    transform: none;
+  }
+  #mainNavbar .fullscreen_mobileOverlay.show .navbar-nav a:nth-child(1) {
+    transition-delay: 0.2s, 0.2s, 0s;
+  }
+  #mainNavbar .fullscreen_mobileOverlay.show .navbar-nav a:nth-child(2) {
+    transition-delay: 0.25s, 0.25s, 0s;
+  }
+  #mainNavbar .fullscreen_mobileOverlay.show .navbar-nav a:nth-child(3) {
+    transition-delay: 0.3s, 0.3s, 0s;
+  }
+  #mainNavbar .fullscreen_mobileOverlay.show .navbar-nav a:nth-child(4) {
+    transition-delay: 0.35s, 0.35s, 0s;
+  }
+  #mainNavbar .fullscreen_mobileOverlay.show .navbar-nav a:nth-child(5) {
+    transition-delay: 0.4s, 0.4s, 0s;
+  }
+  #mainNavbar .fullscreen_mobileOverlay.show .navbar-nav a:nth-child(6) {
+    transition-delay: 0.45s, 0.45s, 0s;
+  }
+
+  #mainNavbar .navbar-nav a:hover,
+  #mainNavbar .navbar-nav a.active {
+    color: var(--ep-red, #e01016);
+  }
+
+  #mainNavbar .navbar-nav a.active {
+    font-weight: 700;
+  }
+
+  /* Stop the page behind from scrolling while the menu is open */
+  body.nav-open {
+    overflow: hidden;
+  }
+}
